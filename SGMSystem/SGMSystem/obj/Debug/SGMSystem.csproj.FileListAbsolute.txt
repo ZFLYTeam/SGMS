@@ -1,0 +1,4 @@
+E:\Code\ASP.NET\SGMS\SGMSystem\SGMSystem\bin\SGMSystem.dll
+E:\Code\ASP.NET\SGMS\SGMSystem\SGMSystem\bin\SGMSystem.pdb
+E:\Code\ASP.NET\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.dll
+E:\Code\ASP.NET\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.pdb
