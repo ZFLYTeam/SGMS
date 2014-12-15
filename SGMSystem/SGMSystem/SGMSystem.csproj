@@ -109,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\model\Admin.cs" />
-    <Compile Include="App_Data\dao\AdminDao.cs" />
     <Compile Include="adminLogin.aspx.cs">
       <DependentUpon>adminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,6 +117,11 @@
       <DependentUpon>adminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Data\util\DbUtil.cs" />
+    <Compile Include="App_Data\DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Defualt.aspx.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,6 +134,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="App_Data\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="libs\bootstrap-select\css\bootstrap-select.css.map" />
     <None Include="libs\bootstrap-select\js\bootstrap-select.js.map" />
     <None Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />

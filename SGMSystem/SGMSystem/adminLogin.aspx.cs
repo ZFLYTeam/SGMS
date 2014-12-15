@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SGMSystem.App_Data.DataSetTableAdapters;
+using System.Data;
 
 namespace SGMSystem
 {
@@ -12,7 +14,7 @@ namespace SGMSystem
         /// <summary>
         /// 使用数据库连接层代码，先声明数据库连接层类
         /// </summary>
-        AdminDao adminDao = new AdminDao();
+        t_adminTableAdapter t_adminTA = new t_adminTableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["admin"] != null)
@@ -28,9 +30,12 @@ namespace SGMSystem
             admin.userName = txtUserName.Text;
             admin.password = txtPassword.Text;
 
-            ///通过adminDao对象调用其login方法，需要传入参数admin。
-            ///参数可以是对象也可以是任何变量
-            admin=adminDao.login(admin);//调用赋值完之后的admin对象,返回的对象再赋给admin，节约开销
+            //把登录数据集返回的table放进DataTable dt
+            DataTable dt =t_adminTA.GetAdminByLogin(admin.userName, admin.password);
+            ///把返回的属性赋值给admin
+            admin.id = (Int32)dt.Rows[0]["id"];
+            admin.userName = dt.Rows[0]["userName"].ToString();
+            admin.password = dt.Rows[0]["password"].ToString();
             if (admin != null)
             {
                 Session["admin"] = admin;
