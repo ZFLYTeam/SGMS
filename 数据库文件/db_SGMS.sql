@@ -11,7 +11,7 @@ Target Server Type    : SQL Server
 Target Server Version : 105000
 File Encoding         : 65001
 
-Date: 2014-12-12 01:26:38
+Date: 2014-12-15 16:14:19
 */
 
 
@@ -68,10 +68,10 @@ GO
 DROP TABLE [dbo].[t_class]
 GO
 CREATE TABLE [dbo].[t_class] (
-[id] int NOT NULL ,
 [majorId] int NULL ,
 [classNum] int NULL ,
-[grade] int NULL 
+[grade] int NULL ,
+[id] int NOT NULL IDENTITY(1,1) 
 )
 
 
@@ -80,6 +80,10 @@ GO
 -- ----------------------------
 -- Records of t_class
 -- ----------------------------
+SET IDENTITY_INSERT [dbo].[t_class] ON
+GO
+SET IDENTITY_INSERT [dbo].[t_class] OFF
+GO
 
 -- ----------------------------
 -- Table structure for t_course
@@ -87,10 +91,10 @@ GO
 DROP TABLE [dbo].[t_course]
 GO
 CREATE TABLE [dbo].[t_course] (
-[id] int NOT NULL ,
 [academyId] int NULL ,
 [courseName] int NOT NULL ,
-[property] varchar(50) NOT NULL 
+[property] varchar(50) NOT NULL ,
+[id] int NOT NULL IDENTITY(1,1) 
 )
 
 
@@ -99,6 +103,10 @@ GO
 -- ----------------------------
 -- Records of t_course
 -- ----------------------------
+SET IDENTITY_INSERT [dbo].[t_course] ON
+GO
+SET IDENTITY_INSERT [dbo].[t_course] OFF
+GO
 
 -- ----------------------------
 -- Table structure for t_courseManage
@@ -178,11 +186,11 @@ GO
 DROP TABLE [dbo].[t_sc]
 GO
 CREATE TABLE [dbo].[t_sc] (
-[id] int NOT NULL ,
 [stuId] int NULL ,
 [cmId] int NULL ,
 [usualScore] float(53) NULL ,
-[testScore] float(53) NULL 
+[testScore] float(53) NULL ,
+[id] int NOT NULL IDENTITY(1,1) 
 )
 
 
@@ -203,6 +211,10 @@ GO
 -- ----------------------------
 -- Records of t_sc
 -- ----------------------------
+SET IDENTITY_INSERT [dbo].[t_sc] ON
+GO
+SET IDENTITY_INSERT [dbo].[t_sc] OFF
+GO
 
 -- ----------------------------
 -- Table structure for t_student
