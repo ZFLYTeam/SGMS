@@ -129,8 +129,10 @@
     <Compile Include="Defualt.aspx.designer.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\model\Major.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Data\util\StringUtil.cs" />
+    <Compile Include="App_Data\model\Sc.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
