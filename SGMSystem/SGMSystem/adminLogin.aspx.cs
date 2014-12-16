@@ -25,14 +25,10 @@ namespace SGMSystem
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            ///使用admin对象之前先new一个 然后给需要的属性赋值
-            Admin admin = new Admin();
-            admin.userName = txtUserName.Text;
-            admin.password = txtPassword.Text;
-
             //把登录数据集返回的table放进DataTable dt
-            DataTable dt =t_adminTA.GetAdminByLogin(admin.userName, admin.password);
+            DataTable dt = t_adminTA.GetAdminByLogin(txtUserName.Text, txtPassword.Text);
             ///把返回的属性赋值给admin
+            Admin admin = new Admin();
             admin.id = (Int32)dt.Rows[0]["id"];
             admin.userName = dt.Rows[0]["userName"].ToString();
             admin.password = dt.Rows[0]["password"].ToString();
