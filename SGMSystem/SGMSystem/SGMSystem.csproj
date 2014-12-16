@@ -131,6 +131,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Data\util\StringUtil.cs" />
+    <Compile Include="App_Data\model\Student.cs" />
+    <Compile Include="App_Data\model\Teacher.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
