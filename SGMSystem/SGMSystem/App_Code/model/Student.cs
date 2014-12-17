@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SGMSystem
+namespace SGMSystem.App_Code
 {
     /// <summary>
     /// 作者:张嘉
     /// 学生对象实体类
     /// </summary>
-    public class Student
+    public class StudentModel
     {
         public int id;              //id
         public String name;         //名字

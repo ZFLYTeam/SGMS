@@ -1,7 +1,7 @@
-﻿; $(function () {
+; $(function () {
     window.Modal = function () {
         var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm');
-        var alr = $("#ycf-alert");
+        var alr = $("#zjplus-alert");
         var ahtml = alr.html();
 
         //关闭时恢复 modal html 原样，供下次调用时 replace 用

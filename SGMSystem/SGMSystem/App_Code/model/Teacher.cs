@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SGMSystem
+namespace SGMSystem.App_Code
 {
     /// <summary>
     /// 教师对象实体类
     /// </summary>
-    public class Teacher
+    public class TeacherModel
     {
         public int id;              //id
         public String techNum;      //职工号

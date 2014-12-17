@@ -3,13 +3,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title></title>
-    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="libs/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
-    <link href="libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
-    <link href="libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/favicon.png" />
+<head runat="server">
+    <title>管理员登录</title>
+    <link href="../libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon.png" />
      <style type="text/css">
       body {
         padding-top: 40px;
@@ -55,15 +54,8 @@
         <asp:Label ID="lblError" runat="server" Text=""></asp:Label>              
     </div>
     </form>
-    <script type="text/javascript" src="libs/bootstrap/js/jquery.min.js"></script>
-    <script type="text/javascript" src="libs/bootstrap/js/jqBootstrapValidation.js"></script>
-    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="libs/bootstrap-select/js/bootstrap-select.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-            $('.selectpicker').selectpicker();
-        });
-    </script>
+    <script type="text/javascript" src="../libs/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-select/js/bootstrap-select.js"></script>
 </body>
 </html>

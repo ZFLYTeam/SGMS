@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="SGMSystem.manager.manager" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>教务管理系统管理员</title>
+    <link href="../libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../libs/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <link href="../libs/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../libs/css/autocut.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/favicon.png" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="container">
+        <div>
+            <h1>教务管理系统</h1>
+        </div>
+    <form id="form1" runat="server">
+            <div class="row">
+            <div align="right">
+                <asp:ScriptManager ID="scmTime" runat="server">
+                </asp:ScriptManager>
+                <asp:UpdatePanel ID="uplTime" runat="server">
+                    <ContentTemplate>
+                        <asp:Label ID="lblTime" runat="server" Text=""></asp:Label>
+                        <asp:Timer ID="Timer" runat="server" Interval="1000">
+                        </asp:Timer>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div class="span12">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                                </span></a><a href="Defualt.aspx" class="brand">ZFLY</a>
+                            <div class="nav-collapse collapse navbar-responsive-collapse">
+                                <ul class="nav">
+                                    <li><a href="Defualt.aspx">主页</a></li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">新闻信息管理<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">新闻信息添加</a> </li>
+                                            <li><a href="#">新闻信息维护</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav pull-right">
+                                    <li><a class="fa fa-user">
+                                        <asp:Label ID="lblUser" runat="server" Text=""></asp:Label></a> </li>
+                                    <li class="divider-vertical"></li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">系统管理<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">修改密码</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#alertExit" data-toggle="modal">退出系统</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="alertExit" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×</button>
+                    <h3 id="myModalLabel">
+                        提示
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        你确定退出系统？</p>
+                </div>
+                <div class="modal-footer">
+                    <input id="btnLogOut" type="button" class="btn btn-success" onclick="javascript:logOut()" value="确定" />
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">
+                        取消</button>
+                </div>
+            </div>
+        </div>
+        <div>
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="breadcrumb" PathSeparator="&nbsp;/&nbsp;&nbsp;">
+        </asp:SiteMapPath>
+        </div>
+    <div style="padding-top: 25px; height:auto; min-height:400px; _height:500px;">
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+    <div class="row">
+        <div class="span12">
+            <div style="text-align:center;">
+                Copyright © 2014-2015 ZFLY版权所有
+            </div>
+        </div>
+    </div>
+     <!-- system modal start -->
+        <div id="zjplus-alert" class="modal" hidden="hidden" style="display:none;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
+                        <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i> [Title]</h5>
+                    </div>
+                    <div class="modal-body small">
+                        <p>[Message]</p>
+                    </div>
+                    <div class="modal-footer" >
+                        <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+                        <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <!-- system modal end -->
+    <script type="text/javascript" src="../libs/bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-select/js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="../libs/modal/modal.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.selectpicker').selectpicker();
+        });
+        function logOut() {
+            window.location.href = "adminLogin.aspx";
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="footer" runat="server"> </asp:ContentPlaceHolder>
+</body>
+</html>

@@ -51,8 +51,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="adminLogin.aspx" />
-    <Content Include="Defualt.aspx" />
+    <Content Include="Admin\adminLogin.aspx" />
+    <Content Include="Admin\Defualt.aspx" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="index.aspx" />
     <Content Include="libs\bootstrap-select\css\bootstrap-select.css" />
     <Content Include="libs\bootstrap-select\css\bootstrap-select.min.css" />
     <Content Include="libs\bootstrap-select\js\bootstrap-select.js" />
@@ -99,6 +101,8 @@
     <Content Include="libs\font-awesome\css\font-awesome.min.css" />
     <Content Include="libs\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="libs\modal\modal.js" />
+    <Content Include="Student\Defualt.aspx" />
+    <Content Include="Teacher\Defualt.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -108,43 +112,87 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\model\Admin.cs" />
-    <Compile Include="adminLogin.aspx.cs">
+    <Compile Include="Admin\Defualt.aspx.cs">
+      <DependentUpon>Defualt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Defualt.aspx.designer.cs">
+      <DependentUpon>Defualt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\model\Admin.cs" />
+    <Compile Include="Admin\adminLogin.aspx.cs">
       <DependentUpon>adminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminLogin.aspx.designer.cs">
+    <Compile Include="Admin\adminLogin.aspx.designer.cs">
       <DependentUpon>adminLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Data\util\DbUtil.cs" />
-    <Compile Include="App_Data\DataSet.Designer.cs">
+    <Compile Include="App_Code\util\DbUtil.cs" />
+    <Compile Include="App_Code\DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Defualt.aspx.cs">
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App_Code\util\StringUtil.cs" />
+    <Compile Include="App_Code\model\Student.cs" />
+    <Compile Include="App_Code\model\Teacher.cs" />
+    <Compile Include="Student\Defualt.aspx.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Defualt.aspx.designer.cs">
+    <Compile Include="Student\Defualt.aspx.designer.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="App_Data\util\StringUtil.cs" />
-    <Compile Include="App_Data\model\Student.cs" />
-    <Compile Include="App_Data\model\Teacher.cs" />
+    <Compile Include="Student\Stu.Master.cs">
+      <DependentUpon>Stu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Stu.Master.designer.cs">
+      <DependentUpon>Stu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Defualt.aspx.cs">
+      <DependentUpon>Defualt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Defualt.aspx.designer.cs">
+      <DependentUpon>Defualt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Tech.Master.cs">
+      <DependentUpon>Tech.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\Tech.Master.designer.cs">
+      <DependentUpon>Tech.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="App_Data\DataSet.xsc">
+    <Folder Include="Images\headImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Code\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
-    <None Include="App_Data\DataSet.xsd">
+    <None Include="App_Code\DataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="App_Data\DataSet.xss">
+    <None Include="App_Code\DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
     <None Include="libs\bootstrap-select\css\bootstrap-select.css.map" />
@@ -179,6 +227,10 @@
     <None Include="libs\font-awesome\scss\_spinning.scss" />
     <None Include="libs\font-awesome\scss\_stacked.scss" />
     <None Include="libs\font-awesome\scss\_variables.scss" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Web.sitemap" />
+    <Content Include="Student\Stu.Master" />
+    <Content Include="Teacher\Tech.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

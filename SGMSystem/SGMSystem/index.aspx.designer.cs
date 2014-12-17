@@ -10,7 +10,7 @@
 namespace SGMSystem {
     
     
-    public partial class Defualt {
+    public partial class index {
         
         /// <summary>
         /// form1 控件。
