@@ -148,7 +148,7 @@
               <Mapping SourceColumn="headImage" DataSetColumn="headImage" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAdmin" Modifier="Public" Name="DeleteAdmin" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteAdmin">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAdmin" Modifier="Public" Name="DeleteAdmin" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAdmin">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_admin] WHERE (([id] = @Original_id))</CommandText>
@@ -179,7 +179,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertAdmin" Modifier="Public" Name="InsertAdmin" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertAdmin">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertAdmin" Modifier="Public" Name="InsertAdmin" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertAdmin">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_admin] ([userName], [password], [headImage]) VALUES (@userName, @password, @headImage)</CommandText>
@@ -426,7 +426,7 @@
               <Mapping SourceColumn="id" DataSetColumn="id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCourse" Modifier="Public" Name="DeleteCourse" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteCourse">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCourse" Modifier="Public" Name="DeleteCourse" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteCourse">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_course] WHERE (([id] = @Original_id))</CommandText>
@@ -446,7 +446,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertCourse" Modifier="Public" Name="InsertCourse" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertCourse">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertCourse" Modifier="Public" Name="InsertCourse" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertCourse">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_course] ([academyId], [courseName], [property]) VALUES (@academyId, @courseName, @property)</CommandText>
@@ -526,7 +526,7 @@
               <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCourseManage" Modifier="Public" Name="DeleteCourseManage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteCourseManage">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteCourseManage" Modifier="Public" Name="DeleteCourseManage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteCourseManage">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_courseManage] WHERE (([id] = @Original_id))</CommandText>
@@ -546,7 +546,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertCourseManage" Modifier="Public" Name="InsertCourseManage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertCourseManage">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertCourseManage" Modifier="Public" Name="InsertCourseManage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertCourseManage">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_courseManage] ([courseId], [teacherId], [termId], [credit], [creditHours]) VALUES (@courseId, @teacherId, @termId, @credit, @creditHours)</CommandText>
@@ -618,7 +618,7 @@
               <Mapping SourceColumn="academyName" DataSetColumn="academyName" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAcademy" Modifier="Public" Name="DeleteAcademy" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteAcademy">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteAcademy" Modifier="Public" Name="DeleteAcademy" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteAcademy">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_academy] WHERE (([id] = @Original_id))</CommandText>
@@ -638,7 +638,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertAcademy" Modifier="Public" Name="InsertAcademy" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertAcademy">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertAcademy" Modifier="Public" Name="InsertAcademy" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertAcademy">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_academy] ([academyName]) VALUES (@academyName)</CommandText>
@@ -729,7 +729,7 @@
               <Mapping SourceColumn="id" DataSetColumn="id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteStudent" Modifier="Public" Name="DeleteStudent" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteStudent">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteStudent" Modifier="Public" Name="DeleteStudent" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteStudent">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_student] WHERE (([id] = @Original_id))</CommandText>
@@ -760,7 +760,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertStudent" Modifier="Public" Name="InsertStudent" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertStudent">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertStudent" Modifier="Public" Name="InsertStudent" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertStudent">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_student] ([name], [sno], [sex], [birth], [nation], [political], [headImage], [classId], [idNum], [password]) VALUES (@name, @sno, @sex, @birth, @nation, @political, @headImage, @classId, @idNum, @password)</CommandText>
@@ -848,7 +848,7 @@
               <Mapping SourceColumn="id" DataSetColumn="id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteClass" Modifier="Public" Name="DeleteClass" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteClass">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteClass" Modifier="Public" Name="DeleteClass" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteClass">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_class] WHERE (([id] = @Original_id))</CommandText>
@@ -868,7 +868,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertClass" Modifier="Public" Name="InsertClass" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertClass">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertClass" Modifier="Public" Name="InsertClass" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertClass">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_class] ([majorId], [classNum], [grade]) VALUES (@majorId, @classNum, @grade)</CommandText>
@@ -954,7 +954,7 @@
               <Mapping SourceColumn="password" DataSetColumn="password" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteTeacher" Modifier="Public" Name="DeleteTeacher" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteTeacher">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteTeacher" Modifier="Public" Name="DeleteTeacher" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteTeacher">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_teacher] WHERE (([id] = @Original_id))</CommandText>
@@ -985,7 +985,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertTeacher" Modifier="Public" Name="InsertTeacher" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertTeacher">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertTeacher" Modifier="Public" Name="InsertTeacher" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertTeacher">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_teacher] ([techNum], [teacherName], [sex], [birth], [title], [heahImage], [password]) VALUES (@techNum, @teacherName, @sex, @birth, @title, @heahImage, @password)</CommandText>
@@ -1061,7 +1061,7 @@
               <Mapping SourceColumn="termName" DataSetColumn="termName" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteTerm" Modifier="Public" Name="DeleteTerm" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteTerm">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteTerm" Modifier="Public" Name="DeleteTerm" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteTerm">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_term] WHERE (([id] = @Original_id))</CommandText>
@@ -1081,7 +1081,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertTerm" Modifier="Public" Name="InsertTerm" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertTerm">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertTerm" Modifier="Public" Name="InsertTerm" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertTerm">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[t_term] ([termName]) VALUES (@termName)</CommandText>
@@ -1154,7 +1154,7 @@
               <Mapping SourceColumn="newsModifyTime" DataSetColumn="newsModifyTime" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteNews" Modifier="Public" Name="DeleteNews" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteNews">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteNews" Modifier="Public" Name="DeleteNews" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteNews">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[t_news] WHERE (([id] = @Original_id))</CommandText>
@@ -1174,15 +1174,14 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNews" Modifier="Public" Name="InsertNews" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertNews">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertNews" Modifier="Public" Name="InsertNews" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertNews">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO [dbo].[t_news] ([newsTitle], [newsBody], [newsRepTime], [newsModifyTime]) VALUES (@newsTitle, @newsBody, @newsRepTime, @newsModifyTime)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[t_news] ([newsTitle], [newsBody], [newsRepTime]) VALUES (@newsTitle, @newsBody, @newsRepTime)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="newsTitle" ColumnName="newsTitle" DataSourceName="db_SGMS.dbo.t_news" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@newsTitle" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="newsTitle" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="newsBody" ColumnName="newsBody" DataSourceName="db_SGMS.dbo.t_news" DataTypeServer="varchar(MAX)" DbType="AnsiString" Direction="Input" ParameterName="@newsBody" Precision="0" ProviderType="VarChar" Scale="0" Size="2147483647" SourceColumn="newsBody" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="newsRepTime" ColumnName="newsRepTime" DataSourceName="db_SGMS.dbo.t_news" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@newsRepTime" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="newsRepTime" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="newsModifyTime" ColumnName="newsModifyTime" DataSourceName="db_SGMS.dbo.t_news" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@newsModifyTime" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="newsModifyTime" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -1211,7 +1210,7 @@
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="t_major" msprop:Generator_TableClassName="t_majorDataTable" msprop:Generator_TableVarName="tablet_major" msprop:Generator_RowChangedName="t_majorRowChanged" msprop:Generator_TablePropName="t_major" msprop:Generator_RowDeletingName="t_majorRowDeleting" msprop:Generator_RowChangingName="t_majorRowChanging" msprop:Generator_RowEvHandlerName="t_majorRowChangeEventHandler" msprop:Generator_RowDeletedName="t_majorRowDeleted" msprop:Generator_RowClassName="t_majorRow" msprop:Generator_UserTableName="t_major" msprop:Generator_RowEvArgName="t_majorRowChangeEvent">
+        <xs:element name="t_major" msprop:Generator_TableClassName="t_majorDataTable" msprop:Generator_TableVarName="tablet_major" msprop:Generator_TablePropName="t_major" msprop:Generator_RowDeletingName="t_majorRowDeleting" msprop:Generator_RowChangingName="t_majorRowChanging" msprop:Generator_RowEvHandlerName="t_majorRowChangeEventHandler" msprop:Generator_RowDeletedName="t_majorRowDeleted" msprop:Generator_UserTableName="t_major" msprop:Generator_RowChangedName="t_majorRowChanged" msprop:Generator_RowEvArgName="t_majorRowChangeEvent" msprop:Generator_RowClassName="t_majorRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1227,7 +1226,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_SC" msprop:Generator_TableClassName="view_SCDataTable" msprop:Generator_TableVarName="tableview_SC" msprop:Generator_RowChangedName="view_SCRowChanged" msprop:Generator_TablePropName="view_SC" msprop:Generator_RowDeletingName="view_SCRowDeleting" msprop:Generator_RowChangingName="view_SCRowChanging" msprop:Generator_RowEvHandlerName="view_SCRowChangeEventHandler" msprop:Generator_RowDeletedName="view_SCRowDeleted" msprop:Generator_RowClassName="view_SCRow" msprop:Generator_UserTableName="view_SC" msprop:Generator_RowEvArgName="view_SCRowChangeEvent">
+        <xs:element name="view_SC" msprop:Generator_TableClassName="view_SCDataTable" msprop:Generator_TableVarName="tableview_SC" msprop:Generator_TablePropName="view_SC" msprop:Generator_RowDeletingName="view_SCRowDeleting" msprop:Generator_RowChangingName="view_SCRowChanging" msprop:Generator_RowEvHandlerName="view_SCRowChangeEventHandler" msprop:Generator_RowDeletedName="view_SCRowDeleted" msprop:Generator_UserTableName="view_SC" msprop:Generator_RowChangedName="view_SCRowChanged" msprop:Generator_RowEvArgName="view_SCRowChangeEvent" msprop:Generator_RowClassName="view_SCRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1267,7 +1266,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_student" msprop:Generator_TableClassName="view_studentDataTable" msprop:Generator_TableVarName="tableview_student" msprop:Generator_RowChangedName="view_studentRowChanged" msprop:Generator_TablePropName="view_student" msprop:Generator_RowDeletingName="view_studentRowDeleting" msprop:Generator_RowChangingName="view_studentRowChanging" msprop:Generator_RowEvHandlerName="view_studentRowChangeEventHandler" msprop:Generator_RowDeletedName="view_studentRowDeleted" msprop:Generator_RowClassName="view_studentRow" msprop:Generator_UserTableName="view_student" msprop:Generator_RowEvArgName="view_studentRowChangeEvent">
+        <xs:element name="view_student" msprop:Generator_TableClassName="view_studentDataTable" msprop:Generator_TableVarName="tableview_student" msprop:Generator_TablePropName="view_student" msprop:Generator_RowDeletingName="view_studentRowDeleting" msprop:Generator_RowChangingName="view_studentRowChanging" msprop:Generator_RowEvHandlerName="view_studentRowChangeEventHandler" msprop:Generator_RowDeletedName="view_studentRowDeleted" msprop:Generator_UserTableName="view_student" msprop:Generator_RowChangedName="view_studentRowChanged" msprop:Generator_RowEvArgName="view_studentRowChangeEvent" msprop:Generator_RowClassName="view_studentRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1346,7 +1345,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_techCourse" msprop:Generator_TableClassName="view_techCourseDataTable" msprop:Generator_TableVarName="tableview_techCourse" msprop:Generator_RowChangedName="view_techCourseRowChanged" msprop:Generator_TablePropName="view_techCourse" msprop:Generator_RowDeletingName="view_techCourseRowDeleting" msprop:Generator_RowChangingName="view_techCourseRowChanging" msprop:Generator_RowEvHandlerName="view_techCourseRowChangeEventHandler" msprop:Generator_RowDeletedName="view_techCourseRowDeleted" msprop:Generator_RowClassName="view_techCourseRow" msprop:Generator_UserTableName="view_techCourse" msprop:Generator_RowEvArgName="view_techCourseRowChangeEvent">
+        <xs:element name="view_techCourse" msprop:Generator_TableClassName="view_techCourseDataTable" msprop:Generator_TableVarName="tableview_techCourse" msprop:Generator_TablePropName="view_techCourse" msprop:Generator_RowDeletingName="view_techCourseRowDeleting" msprop:Generator_RowChangingName="view_techCourseRowChanging" msprop:Generator_RowEvHandlerName="view_techCourseRowChangeEventHandler" msprop:Generator_RowDeletedName="view_techCourseRowDeleted" msprop:Generator_UserTableName="view_techCourse" msprop:Generator_RowChangedName="view_techCourseRowChanged" msprop:Generator_RowEvArgName="view_techCourseRowChangeEvent" msprop:Generator_RowClassName="view_techCourseRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1370,7 +1369,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_sc" msprop:Generator_TableClassName="t_scDataTable" msprop:Generator_TableVarName="tablet_sc" msprop:Generator_RowChangedName="t_scRowChanged" msprop:Generator_TablePropName="t_sc" msprop:Generator_RowDeletingName="t_scRowDeleting" msprop:Generator_RowChangingName="t_scRowChanging" msprop:Generator_RowEvHandlerName="t_scRowChangeEventHandler" msprop:Generator_RowDeletedName="t_scRowDeleted" msprop:Generator_RowClassName="t_scRow" msprop:Generator_UserTableName="t_sc" msprop:Generator_RowEvArgName="t_scRowChangeEvent">
+        <xs:element name="t_sc" msprop:Generator_TableClassName="t_scDataTable" msprop:Generator_TableVarName="tablet_sc" msprop:Generator_TablePropName="t_sc" msprop:Generator_RowDeletingName="t_scRowDeleting" msprop:Generator_RowChangingName="t_scRowChanging" msprop:Generator_RowEvHandlerName="t_scRowChangeEventHandler" msprop:Generator_RowDeletedName="t_scRowDeleted" msprop:Generator_UserTableName="t_sc" msprop:Generator_RowChangedName="t_scRowChanged" msprop:Generator_RowEvArgName="t_scRowChangeEvent" msprop:Generator_RowClassName="t_scRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="stuId" msprop:Generator_ColumnVarNameInTable="columnstuId" msprop:Generator_ColumnPropNameInRow="stuId" msprop:Generator_ColumnPropNameInTable="stuIdColumn" msprop:Generator_UserColumnName="stuId" type="xs:int" minOccurs="0" />
@@ -1381,7 +1380,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_course" msprop:Generator_TableClassName="t_courseDataTable" msprop:Generator_TableVarName="tablet_course" msprop:Generator_RowChangedName="t_courseRowChanged" msprop:Generator_TablePropName="t_course" msprop:Generator_RowDeletingName="t_courseRowDeleting" msprop:Generator_RowChangingName="t_courseRowChanging" msprop:Generator_RowEvHandlerName="t_courseRowChangeEventHandler" msprop:Generator_RowDeletedName="t_courseRowDeleted" msprop:Generator_RowClassName="t_courseRow" msprop:Generator_UserTableName="t_course" msprop:Generator_RowEvArgName="t_courseRowChangeEvent">
+        <xs:element name="t_course" msprop:Generator_TableClassName="t_courseDataTable" msprop:Generator_TableVarName="tablet_course" msprop:Generator_TablePropName="t_course" msprop:Generator_RowDeletingName="t_courseRowDeleting" msprop:Generator_RowChangingName="t_courseRowChanging" msprop:Generator_RowEvHandlerName="t_courseRowChangeEventHandler" msprop:Generator_RowDeletedName="t_courseRowDeleted" msprop:Generator_UserTableName="t_course" msprop:Generator_RowChangedName="t_courseRowChanged" msprop:Generator_RowEvArgName="t_courseRowChangeEvent" msprop:Generator_RowClassName="t_courseRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="academyId" msprop:Generator_ColumnVarNameInTable="columnacademyId" msprop:Generator_ColumnPropNameInRow="academyId" msprop:Generator_ColumnPropNameInTable="academyIdColumn" msprop:Generator_UserColumnName="academyId" type="xs:int" minOccurs="0" />
@@ -1397,7 +1396,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_courseManage" msprop:Generator_TableClassName="t_courseManageDataTable" msprop:Generator_TableVarName="tablet_courseManage" msprop:Generator_RowChangedName="t_courseManageRowChanged" msprop:Generator_TablePropName="t_courseManage" msprop:Generator_RowDeletingName="t_courseManageRowDeleting" msprop:Generator_RowChangingName="t_courseManageRowChanging" msprop:Generator_RowEvHandlerName="t_courseManageRowChangeEventHandler" msprop:Generator_RowDeletedName="t_courseManageRowDeleted" msprop:Generator_RowClassName="t_courseManageRow" msprop:Generator_UserTableName="t_courseManage" msprop:Generator_RowEvArgName="t_courseManageRowChangeEvent">
+        <xs:element name="t_courseManage" msprop:Generator_TableClassName="t_courseManageDataTable" msprop:Generator_TableVarName="tablet_courseManage" msprop:Generator_TablePropName="t_courseManage" msprop:Generator_RowDeletingName="t_courseManageRowDeleting" msprop:Generator_RowChangingName="t_courseManageRowChanging" msprop:Generator_RowEvHandlerName="t_courseManageRowChangeEventHandler" msprop:Generator_RowDeletedName="t_courseManageRowDeleted" msprop:Generator_UserTableName="t_courseManage" msprop:Generator_RowChangedName="t_courseManageRowChanged" msprop:Generator_RowEvArgName="t_courseManageRowChangeEvent" msprop:Generator_RowClassName="t_courseManageRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1409,7 +1408,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_academy" msprop:Generator_TableClassName="t_academyDataTable" msprop:Generator_TableVarName="tablet_academy" msprop:Generator_RowChangedName="t_academyRowChanged" msprop:Generator_TablePropName="t_academy" msprop:Generator_RowDeletingName="t_academyRowDeleting" msprop:Generator_RowChangingName="t_academyRowChanging" msprop:Generator_RowEvHandlerName="t_academyRowChangeEventHandler" msprop:Generator_RowDeletedName="t_academyRowDeleted" msprop:Generator_RowClassName="t_academyRow" msprop:Generator_UserTableName="t_academy" msprop:Generator_RowEvArgName="t_academyRowChangeEvent">
+        <xs:element name="t_academy" msprop:Generator_TableClassName="t_academyDataTable" msprop:Generator_TableVarName="tablet_academy" msprop:Generator_TablePropName="t_academy" msprop:Generator_RowDeletingName="t_academyRowDeleting" msprop:Generator_RowChangingName="t_academyRowChanging" msprop:Generator_RowEvHandlerName="t_academyRowChangeEventHandler" msprop:Generator_RowDeletedName="t_academyRowDeleted" msprop:Generator_UserTableName="t_academy" msprop:Generator_RowChangedName="t_academyRowChanged" msprop:Generator_RowEvArgName="t_academyRowChangeEvent" msprop:Generator_RowClassName="t_academyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1423,7 +1422,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_admin" msprop:Generator_TableClassName="t_adminDataTable" msprop:Generator_TableVarName="tablet_admin" msprop:Generator_RowChangedName="t_adminRowChanged" msprop:Generator_TablePropName="t_admin" msprop:Generator_RowDeletingName="t_adminRowDeleting" msprop:Generator_RowChangingName="t_adminRowChanging" msprop:Generator_RowEvHandlerName="t_adminRowChangeEventHandler" msprop:Generator_RowDeletedName="t_adminRowDeleted" msprop:Generator_RowClassName="t_adminRow" msprop:Generator_UserTableName="t_admin" msprop:Generator_RowEvArgName="t_adminRowChangeEvent">
+        <xs:element name="t_admin" msprop:Generator_TableClassName="t_adminDataTable" msprop:Generator_TableVarName="tablet_admin" msprop:Generator_TablePropName="t_admin" msprop:Generator_RowDeletingName="t_adminRowDeleting" msprop:Generator_RowChangingName="t_adminRowChanging" msprop:Generator_RowEvHandlerName="t_adminRowChangeEventHandler" msprop:Generator_RowDeletedName="t_adminRowDeleted" msprop:Generator_UserTableName="t_admin" msprop:Generator_RowChangedName="t_adminRowChanged" msprop:Generator_RowEvArgName="t_adminRowChangeEvent" msprop:Generator_RowClassName="t_adminRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1451,7 +1450,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_student" msprop:Generator_TableClassName="t_studentDataTable" msprop:Generator_TableVarName="tablet_student" msprop:Generator_RowChangedName="t_studentRowChanged" msprop:Generator_TablePropName="t_student" msprop:Generator_RowDeletingName="t_studentRowDeleting" msprop:Generator_RowChangingName="t_studentRowChanging" msprop:Generator_RowEvHandlerName="t_studentRowChangeEventHandler" msprop:Generator_RowDeletedName="t_studentRowDeleted" msprop:Generator_RowClassName="t_studentRow" msprop:Generator_UserTableName="t_student" msprop:Generator_RowEvArgName="t_studentRowChangeEvent">
+        <xs:element name="t_student" msprop:Generator_TableClassName="t_studentDataTable" msprop:Generator_TableVarName="tablet_student" msprop:Generator_TablePropName="t_student" msprop:Generator_RowDeletingName="t_studentRowDeleting" msprop:Generator_RowChangingName="t_studentRowChanging" msprop:Generator_RowEvHandlerName="t_studentRowChangeEventHandler" msprop:Generator_RowDeletedName="t_studentRowDeleted" msprop:Generator_UserTableName="t_student" msprop:Generator_RowChangedName="t_studentRowChanged" msprop:Generator_RowEvArgName="t_studentRowChangeEvent" msprop:Generator_RowClassName="t_studentRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
@@ -1522,7 +1521,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_class" msprop:Generator_TableClassName="t_classDataTable" msprop:Generator_TableVarName="tablet_class" msprop:Generator_RowChangedName="t_classRowChanged" msprop:Generator_TablePropName="t_class" msprop:Generator_RowDeletingName="t_classRowDeleting" msprop:Generator_RowChangingName="t_classRowChanging" msprop:Generator_RowEvHandlerName="t_classRowChangeEventHandler" msprop:Generator_RowDeletedName="t_classRowDeleted" msprop:Generator_RowClassName="t_classRow" msprop:Generator_UserTableName="t_class" msprop:Generator_RowEvArgName="t_classRowChangeEvent">
+        <xs:element name="t_class" msprop:Generator_TableClassName="t_classDataTable" msprop:Generator_TableVarName="tablet_class" msprop:Generator_TablePropName="t_class" msprop:Generator_RowDeletingName="t_classRowDeleting" msprop:Generator_RowChangingName="t_classRowChanging" msprop:Generator_RowEvHandlerName="t_classRowChangeEventHandler" msprop:Generator_RowDeletedName="t_classRowDeleted" msprop:Generator_UserTableName="t_class" msprop:Generator_RowChangedName="t_classRowChanged" msprop:Generator_RowEvArgName="t_classRowChangeEvent" msprop:Generator_RowClassName="t_classRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="majorId" msprop:Generator_ColumnVarNameInTable="columnmajorId" msprop:Generator_ColumnPropNameInRow="majorId" msprop:Generator_ColumnPropNameInTable="majorIdColumn" msprop:Generator_UserColumnName="majorId" type="xs:int" minOccurs="0" />
@@ -1532,7 +1531,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_teacher" msprop:Generator_TableClassName="t_teacherDataTable" msprop:Generator_TableVarName="tablet_teacher" msprop:Generator_RowChangedName="t_teacherRowChanged" msprop:Generator_TablePropName="t_teacher" msprop:Generator_RowDeletingName="t_teacherRowDeleting" msprop:Generator_RowChangingName="t_teacherRowChanging" msprop:Generator_RowEvHandlerName="t_teacherRowChangeEventHandler" msprop:Generator_RowDeletedName="t_teacherRowDeleted" msprop:Generator_RowClassName="t_teacherRow" msprop:Generator_UserTableName="t_teacher" msprop:Generator_RowEvArgName="t_teacherRowChangeEvent">
+        <xs:element name="t_teacher" msprop:Generator_TableClassName="t_teacherDataTable" msprop:Generator_TableVarName="tablet_teacher" msprop:Generator_TablePropName="t_teacher" msprop:Generator_RowDeletingName="t_teacherRowDeleting" msprop:Generator_RowChangingName="t_teacherRowChanging" msprop:Generator_RowEvHandlerName="t_teacherRowChangeEventHandler" msprop:Generator_RowDeletedName="t_teacherRowDeleted" msprop:Generator_UserTableName="t_teacher" msprop:Generator_RowChangedName="t_teacherRowChanged" msprop:Generator_RowEvArgName="t_teacherRowChangeEvent" msprop:Generator_RowClassName="t_teacherRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1582,7 +1581,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_term" msprop:Generator_TableClassName="t_termDataTable" msprop:Generator_TableVarName="tablet_term" msprop:Generator_RowChangedName="t_termRowChanged" msprop:Generator_TablePropName="t_term" msprop:Generator_RowDeletingName="t_termRowDeleting" msprop:Generator_RowChangingName="t_termRowChanging" msprop:Generator_RowEvHandlerName="t_termRowChangeEventHandler" msprop:Generator_RowDeletedName="t_termRowDeleted" msprop:Generator_RowClassName="t_termRow" msprop:Generator_UserTableName="t_term" msprop:Generator_RowEvArgName="t_termRowChangeEvent">
+        <xs:element name="t_term" msprop:Generator_TableClassName="t_termDataTable" msprop:Generator_TableVarName="tablet_term" msprop:Generator_TablePropName="t_term" msprop:Generator_RowDeletingName="t_termRowDeleting" msprop:Generator_RowChangingName="t_termRowChanging" msprop:Generator_RowEvHandlerName="t_termRowChangeEventHandler" msprop:Generator_RowDeletedName="t_termRowDeleted" msprop:Generator_UserTableName="t_term" msprop:Generator_RowChangedName="t_termRowChanged" msprop:Generator_RowEvArgName="t_termRowChangeEvent" msprop:Generator_RowClassName="t_termRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1596,7 +1595,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="t_news" msprop:Generator_TableClassName="t_newsDataTable" msprop:Generator_TableVarName="tablet_news" msprop:Generator_TablePropName="t_news" msprop:Generator_RowDeletingName="t_newsRowDeleting" msprop:Generator_RowChangingName="t_newsRowChanging" msprop:Generator_RowEvHandlerName="t_newsRowChangeEventHandler" msprop:Generator_RowDeletedName="t_newsRowDeleted" msprop:Generator_UserTableName="t_news" msprop:Generator_RowChangedName="t_newsRowChanged" msprop:Generator_RowEvArgName="t_newsRowChangeEvent" msprop:Generator_RowClassName="t_newsRow">
+        <xs:element name="t_news" msprop:Generator_TableClassName="t_newsDataTable" msprop:Generator_TableVarName="tablet_news" msprop:Generator_RowChangedName="t_newsRowChanged" msprop:Generator_TablePropName="t_news" msprop:Generator_RowDeletingName="t_newsRowDeleting" msprop:Generator_RowChangingName="t_newsRowChanging" msprop:Generator_RowEvHandlerName="t_newsRowChangeEventHandler" msprop:Generator_RowDeletedName="t_newsRowDeleted" msprop:Generator_RowClassName="t_newsRow" msprop:Generator_UserTableName="t_news" msprop:Generator_RowEvArgName="t_newsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1692,15 +1691,15 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__t_sc__cmId__693CA210" msdata:parent="t_courseManage" msdata:child="t_sc" msdata:parentkey="id" msdata:childkey="cmId" msprop:Generator_UserChildTable="t_sc" msprop:Generator_ChildPropName="Gett_scRows" msprop:Generator_UserRelationName="FK__t_sc__cmId__693CA210" msprop:Generator_ParentPropName="t_courseManageRow" msprop:Generator_RelationVarName="relationFK__t_sc__cmId__693CA210" msprop:Generator_UserParentTable="t_courseManage" />
-      <msdata:Relationship name="FK__t_courseM__cours__656C112C" msdata:parent="t_course" msdata:child="t_courseManage" msdata:parentkey="id" msdata:childkey="courseId" msprop:Generator_UserChildTable="t_courseManage" msprop:Generator_ChildPropName="Gett_courseManageRows" msprop:Generator_UserRelationName="FK__t_courseM__cours__656C112C" msprop:Generator_RelationVarName="relationFK__t_courseM__cours__656C112C" msprop:Generator_UserParentTable="t_course" msprop:Generator_ParentPropName="t_courseRow" />
-      <msdata:Relationship name="FK__t_major__academy__68487DD7" msdata:parent="t_academy" msdata:child="t_major" msdata:parentkey="id" msdata:childkey="academyId" msprop:Generator_UserChildTable="t_major" msprop:Generator_ChildPropName="Gett_majorRows" msprop:Generator_UserRelationName="FK__t_major__academy__68487DD7" msprop:Generator_ParentPropName="t_academyRow" msprop:Generator_RelationVarName="relationFK__t_major__academy__68487DD7" msprop:Generator_UserParentTable="t_academy" />
-      <msdata:Relationship name="FK__t_course__academ__6477ECF3" msdata:parent="t_academy" msdata:child="t_course" msdata:parentkey="id" msdata:childkey="academyId" msprop:Generator_UserChildTable="t_course" msprop:Generator_ChildPropName="Gett_courseRows" msprop:Generator_UserRelationName="FK__t_course__academ__6477ECF3" msprop:Generator_ParentPropName="t_academyRow" msprop:Generator_RelationVarName="relationFK__t_course__academ__6477ECF3" msprop:Generator_UserParentTable="t_academy" />
-      <msdata:Relationship name="FK__t_sc__stuId__6A30C649" msdata:parent="t_student" msdata:child="t_sc" msdata:parentkey="id" msdata:childkey="stuId" msprop:Generator_UserChildTable="t_sc" msprop:Generator_ChildPropName="Gett_scRows" msprop:Generator_UserRelationName="FK__t_sc__stuId__6A30C649" msprop:Generator_ParentPropName="t_studentRow" msprop:Generator_RelationVarName="relationFK__t_sc__stuId__6A30C649" msprop:Generator_UserParentTable="t_student" />
-      <msdata:Relationship name="FK__t_student__class__6B24EA82" msdata:parent="t_class" msdata:child="t_student" msdata:parentkey="id" msdata:childkey="classId" msprop:Generator_UserChildTable="t_student" msprop:Generator_ChildPropName="Gett_studentRows" msprop:Generator_UserRelationName="FK__t_student__class__6B24EA82" msprop:Generator_ParentPropName="t_classRow" msprop:Generator_RelationVarName="relationFK__t_student__class__6B24EA82" msprop:Generator_UserParentTable="t_class" />
-      <msdata:Relationship name="FK__t_class__majorId__6383C8BA" msdata:parent="t_major" msdata:child="t_class" msdata:parentkey="id" msdata:childkey="majorId" msprop:Generator_UserChildTable="t_class" msprop:Generator_ChildPropName="Gett_classRows" msprop:Generator_UserRelationName="FK__t_class__majorId__6383C8BA" msprop:Generator_RelationVarName="relationFK__t_class__majorId__6383C8BA" msprop:Generator_UserParentTable="t_major" msprop:Generator_ParentPropName="t_majorRow" />
-      <msdata:Relationship name="FK__t_courseM__teach__66603565" msdata:parent="t_teacher" msdata:child="t_courseManage" msdata:parentkey="id" msdata:childkey="teacherId" msprop:Generator_UserChildTable="t_courseManage" msprop:Generator_ChildPropName="Gett_courseManageRows" msprop:Generator_UserRelationName="FK__t_courseM__teach__66603565" msprop:Generator_ParentPropName="t_teacherRow" msprop:Generator_RelationVarName="relationFK__t_courseM__teach__66603565" msprop:Generator_UserParentTable="t_teacher" />
-      <msdata:Relationship name="FK__t_courseM__termI__6754599E" msdata:parent="t_term" msdata:child="t_courseManage" msdata:parentkey="id" msdata:childkey="termId" msprop:Generator_UserChildTable="t_courseManage" msprop:Generator_ChildPropName="Gett_courseManageRows" msprop:Generator_UserRelationName="FK__t_courseM__termI__6754599E" msprop:Generator_ParentPropName="t_termRow" msprop:Generator_RelationVarName="relationFK__t_courseM__termI__6754599E" msprop:Generator_UserParentTable="t_term" />
+      <msdata:Relationship name="FK__t_sc__cmId__693CA210" msdata:parent="t_courseManage" msdata:child="t_sc" msdata:parentkey="id" msdata:childkey="cmId" msprop:Generator_UserChildTable="t_sc" msprop:Generator_ChildPropName="Gett_scRows" msprop:Generator_UserRelationName="FK__t_sc__cmId__693CA210" msprop:Generator_RelationVarName="relationFK__t_sc__cmId__693CA210" msprop:Generator_UserParentTable="t_courseManage" msprop:Generator_ParentPropName="t_courseManageRow" />
+      <msdata:Relationship name="FK__t_courseM__cours__656C112C" msdata:parent="t_course" msdata:child="t_courseManage" msdata:parentkey="id" msdata:childkey="courseId" msprop:Generator_UserChildTable="t_courseManage" msprop:Generator_ChildPropName="Gett_courseManageRows" msprop:Generator_UserRelationName="FK__t_courseM__cours__656C112C" msprop:Generator_ParentPropName="t_courseRow" msprop:Generator_RelationVarName="relationFK__t_courseM__cours__656C112C" msprop:Generator_UserParentTable="t_course" />
+      <msdata:Relationship name="FK__t_major__academy__68487DD7" msdata:parent="t_academy" msdata:child="t_major" msdata:parentkey="id" msdata:childkey="academyId" msprop:Generator_UserChildTable="t_major" msprop:Generator_ChildPropName="Gett_majorRows" msprop:Generator_UserRelationName="FK__t_major__academy__68487DD7" msprop:Generator_RelationVarName="relationFK__t_major__academy__68487DD7" msprop:Generator_UserParentTable="t_academy" msprop:Generator_ParentPropName="t_academyRow" />
+      <msdata:Relationship name="FK__t_course__academ__6477ECF3" msdata:parent="t_academy" msdata:child="t_course" msdata:parentkey="id" msdata:childkey="academyId" msprop:Generator_UserChildTable="t_course" msprop:Generator_ChildPropName="Gett_courseRows" msprop:Generator_UserRelationName="FK__t_course__academ__6477ECF3" msprop:Generator_RelationVarName="relationFK__t_course__academ__6477ECF3" msprop:Generator_UserParentTable="t_academy" msprop:Generator_ParentPropName="t_academyRow" />
+      <msdata:Relationship name="FK__t_sc__stuId__6A30C649" msdata:parent="t_student" msdata:child="t_sc" msdata:parentkey="id" msdata:childkey="stuId" msprop:Generator_UserChildTable="t_sc" msprop:Generator_ChildPropName="Gett_scRows" msprop:Generator_UserRelationName="FK__t_sc__stuId__6A30C649" msprop:Generator_RelationVarName="relationFK__t_sc__stuId__6A30C649" msprop:Generator_UserParentTable="t_student" msprop:Generator_ParentPropName="t_studentRow" />
+      <msdata:Relationship name="FK__t_student__class__6B24EA82" msdata:parent="t_class" msdata:child="t_student" msdata:parentkey="id" msdata:childkey="classId" msprop:Generator_UserChildTable="t_student" msprop:Generator_ChildPropName="Gett_studentRows" msprop:Generator_UserRelationName="FK__t_student__class__6B24EA82" msprop:Generator_RelationVarName="relationFK__t_student__class__6B24EA82" msprop:Generator_UserParentTable="t_class" msprop:Generator_ParentPropName="t_classRow" />
+      <msdata:Relationship name="FK__t_class__majorId__6383C8BA" msdata:parent="t_major" msdata:child="t_class" msdata:parentkey="id" msdata:childkey="majorId" msprop:Generator_UserChildTable="t_class" msprop:Generator_ChildPropName="Gett_classRows" msprop:Generator_UserRelationName="FK__t_class__majorId__6383C8BA" msprop:Generator_ParentPropName="t_majorRow" msprop:Generator_RelationVarName="relationFK__t_class__majorId__6383C8BA" msprop:Generator_UserParentTable="t_major" />
+      <msdata:Relationship name="FK__t_courseM__teach__66603565" msdata:parent="t_teacher" msdata:child="t_courseManage" msdata:parentkey="id" msdata:childkey="teacherId" msprop:Generator_UserChildTable="t_courseManage" msprop:Generator_ChildPropName="Gett_courseManageRows" msprop:Generator_UserRelationName="FK__t_courseM__teach__66603565" msprop:Generator_RelationVarName="relationFK__t_courseM__teach__66603565" msprop:Generator_UserParentTable="t_teacher" msprop:Generator_ParentPropName="t_teacherRow" />
+      <msdata:Relationship name="FK__t_courseM__termI__6754599E" msdata:parent="t_term" msdata:child="t_courseManage" msdata:parentkey="id" msdata:childkey="termId" msprop:Generator_UserChildTable="t_courseManage" msprop:Generator_ChildPropName="Gett_courseManageRows" msprop:Generator_UserRelationName="FK__t_courseM__termI__6754599E" msprop:Generator_RelationVarName="relationFK__t_courseM__termI__6754599E" msprop:Generator_UserParentTable="t_term" msprop:Generator_ParentPropName="t_termRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

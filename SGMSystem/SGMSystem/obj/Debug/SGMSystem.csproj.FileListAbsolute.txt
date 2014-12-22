@@ -6,3 +6,7 @@ C:\Users\Administrator\Desktop\Student\SGMSystem\SGMSystem\bin\SGMSystem.dll
 C:\Users\Administrator\Desktop\Student\SGMSystem\SGMSystem\bin\SGMSystem.pdb
 C:\Users\Administrator\Desktop\Student\SGMSystem\SGMSystem\obj\Debug\SGMSystem.dll
 C:\Users\Administrator\Desktop\Student\SGMSystem\SGMSystem\obj\Debug\SGMSystem.pdb
+E:\Code\Web\SGMS\SGMSystem\SGMSystem\bin\SGMSystem.dll
+E:\Code\Web\SGMS\SGMSystem\SGMSystem\bin\SGMSystem.pdb
+E:\Code\Web\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.dll
+E:\Code\Web\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.pdb
