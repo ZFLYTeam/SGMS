@@ -41,11 +41,26 @@
                             <div class="nav-collapse collapse navbar-responsive-collapse">
                                 <ul class="nav">
                                     <li><a href="Defualt.aspx">主页</a></li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">综合管理<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="AcademyList.aspx">综合管理</a> </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">课程管理<strong
+                                        class="caret"></strong></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="CourseSave.aspx">课程添加</a> </li>
+                                            <li><a href="Courselist.aspx">课程列表</a> </li>
+                                            <li><a href="ScList.aspx">学生选课管理</a> </li>
+                                            <li><a href="CourseManageList.aspx">课程安排管理</a> </li>
+                                        </ul>
+                                    </li>
                                     <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">新闻信息管理<strong
                                         class="caret"></strong></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">新闻信息添加</a> </li>
-                                            <li><a href="#">新闻信息维护</a> </li>
+                                            <li><a href="NewsSave.aspx">新闻信息添加</a> </li>
+                                            <li><a href="NewsList.aspx">新闻信息维护</a> </li>
                                         </ul>
                                     </li>
                                 </ul>

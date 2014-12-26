@@ -18,8 +18,6 @@
     </td>
     </tr>
     <tr>
-    <td style="width:20%">
-    </td>
     <td style="width:60%;valign:top;">
         <p>
         <asp:Label ID="lblNewsBody" runat="server"></asp:Label></br>

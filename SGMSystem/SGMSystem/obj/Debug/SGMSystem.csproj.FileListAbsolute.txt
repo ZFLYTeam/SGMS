@@ -10,3 +10,4 @@ E:\Code\Web\SGMS\SGMSystem\SGMSystem\bin\SGMSystem.dll
 E:\Code\Web\SGMS\SGMSystem\SGMSystem\bin\SGMSystem.pdb
 E:\Code\Web\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.dll
 E:\Code\Web\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.pdb
+E:\Code\ASP.NET\SGMS\SGMSystem\SGMSystem\obj\Debug\SGMSystem.csprojResolveAssemblyReference.cache
