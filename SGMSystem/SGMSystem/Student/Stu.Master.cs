@@ -19,7 +19,7 @@ namespace SGMSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             StudentModel student = null;
-            /*判断是否登录
+            //判断是否登录
             if (Session["student"] != null)
             {
                 student = (StudentModel)Session["student"];
@@ -29,7 +29,6 @@ namespace SGMSystem
             {
                 Response.Redirect("../index.aspx");
             }
-            */
             string date = DateTime.Now.ToString("yyyy年MM月dd日");
             string weekday = DateTime.Now.ToString("dddd");
             string time = DateTime.Now.ToString("hh:mm:ss");

@@ -3701,7 +3701,7 @@ namespace SGMSystem.App_Code {
                 this.columnpolitical.MaxLength = 50;
                 this.columnheadImage.MaxLength = 50;
                 this.columnidNum.MaxLength = 50;
-                this.columnpassword.MaxLength = 1;
+                this.columnpassword.MaxLength = 50;
                 this.columnid.AutoIncrement = true;
                 this.columnid.AutoIncrementSeed = -1;
                 this.columnid.AutoIncrementStep = -1;
@@ -4147,9 +4147,9 @@ namespace SGMSystem.App_Code {
             
             private global::System.Data.DataColumn columntitle;
             
-            private global::System.Data.DataColumn columnheahImage;
-            
             private global::System.Data.DataColumn columnpassword;
+            
+            private global::System.Data.DataColumn columnheadImage;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4234,17 +4234,17 @@ namespace SGMSystem.App_Code {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn heahImageColumn {
+            public global::System.Data.DataColumn passwordColumn {
                 get {
-                    return this.columnheahImage;
+                    return this.columnpassword;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn passwordColumn {
+            public global::System.Data.DataColumn headImageColumn {
                 get {
-                    return this.columnpassword;
+                    return this.columnheadImage;
                 }
             }
             
@@ -4285,7 +4285,7 @@ namespace SGMSystem.App_Code {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public t_teacherRow Addt_teacherRow(int techNum, string teacherName, string sex, string birth, string title, string heahImage, string password) {
+            public t_teacherRow Addt_teacherRow(int techNum, string teacherName, string sex, string birth, string title, string password, string headImage) {
                 t_teacherRow rowt_teacherRow = ((t_teacherRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4294,8 +4294,8 @@ namespace SGMSystem.App_Code {
                         sex,
                         birth,
                         title,
-                        heahImage,
-                        password};
+                        password,
+                        headImage};
                 rowt_teacherRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowt_teacherRow);
                 return rowt_teacherRow;
@@ -4331,8 +4331,8 @@ namespace SGMSystem.App_Code {
                 this.columnsex = base.Columns["sex"];
                 this.columnbirth = base.Columns["birth"];
                 this.columntitle = base.Columns["title"];
-                this.columnheahImage = base.Columns["heahImage"];
                 this.columnpassword = base.Columns["password"];
+                this.columnheadImage = base.Columns["headImage"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4350,10 +4350,10 @@ namespace SGMSystem.App_Code {
                 base.Columns.Add(this.columnbirth);
                 this.columntitle = new global::System.Data.DataColumn("title", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntitle);
-                this.columnheahImage = new global::System.Data.DataColumn("heahImage", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnheahImage);
                 this.columnpassword = new global::System.Data.DataColumn("password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpassword);
+                this.columnheadImage = new global::System.Data.DataColumn("headImage", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnheadImage);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -4369,8 +4369,8 @@ namespace SGMSystem.App_Code {
                 this.columnsex.MaxLength = 10;
                 this.columnbirth.MaxLength = 50;
                 this.columntitle.MaxLength = 50;
-                this.columnheahImage.MaxLength = 50;
-                this.columnpassword.MaxLength = 1;
+                this.columnpassword.MaxLength = 50;
+                this.columnheadImage.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7451,22 +7451,6 @@ namespace SGMSystem.App_Code {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string heahImage {
-                get {
-                    try {
-                        return ((string)(this[this.tablet_teacher.heahImageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“t_teacher”中列“heahImage”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tablet_teacher.heahImageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string password {
                 get {
                     try {
@@ -7478,6 +7462,22 @@ namespace SGMSystem.App_Code {
                 }
                 set {
                     this[this.tablet_teacher.passwordColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string headImage {
+                get {
+                    try {
+                        return ((string)(this[this.tablet_teacher.headImageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“t_teacher”中列“headImage”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablet_teacher.headImageColumn] = value;
                 }
             }
             
@@ -7507,18 +7507,6 @@ namespace SGMSystem.App_Code {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsheahImageNull() {
-                return this.IsNull(this.tablet_teacher.heahImageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetheahImageNull() {
-                this[this.tablet_teacher.heahImageColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IspasswordNull() {
                 return this.IsNull(this.tablet_teacher.passwordColumn);
             }
@@ -7527,6 +7515,18 @@ namespace SGMSystem.App_Code {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetpasswordNull() {
                 this[this.tablet_teacher.passwordColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsheadImageNull() {
+                return this.IsNull(this.tablet_teacher.headImageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetheadImageNull() {
+                this[this.tablet_teacher.headImageColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12257,14 +12257,14 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[t_student] WHERE (([id] = @Original_id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [t_student] WHERE (([id] = @Original_id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[t_student] ([name], [sno], [sex], [birth], [nation], [politica" +
-                "l], [headImage], [classId], [idNum], [password]) VALUES (@name, @sno, @sex, @bir" +
-                "th, @nation, @political, @headImage, @classId, @idNum, @password)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [t_student] ([name], [sno], [sex], [birth], [nation], [political], [h" +
+                "eadImage], [classId], [idNum], [password]) VALUES (@name, @sno, @sex, @birth, @n" +
+                "ation, @political, @headImage, @classId, @idNum, @password)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12278,10 +12278,10 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[t_student] SET [name] = @name, [sno] = @sno, [sex] = @sex, [birth] " +
-                "= @birth, [nation] = @nation, [political] = @political, [headImage] = @headImage" +
-                ", [classId] = @classId, [idNum] = @idNum, [password] = @password WHERE (([id] = " +
-                "@Original_id))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [t_student] SET [name] = @name, [sno] = @sno, [sex] = @sex, [birth] = @bir" +
+                "th, [nation] = @nation, [political] = @political, [headImage] = @headImage, [cla" +
+                "ssId] = @classId, [idNum] = @idNum, [password] = @password WHERE (([id] = @Origi" +
+                "nal_id))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12309,8 +12309,8 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT name, sno, sex, birth, nation, political, headImage, classId, idNum, passw" +
-                "ord, id FROM dbo.t_student";
+            this._commandCollection[0].CommandText = "SELECT   name, sno, sex, birth, nation, political, headImage, classId, idNum, pas" +
+                "sword, id\r\nFROM      t_student";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -12319,22 +12319,23 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM dbo.t_student where classId=@classId";
+            this._commandCollection[2].CommandText = "SELECT birth, classId, headImage, id, idNum, name, nation, password, political, s" +
+                "ex, sno FROM t_student WHERE (classId = @classId)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@classId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "classId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT name, sno, sex, birth, nation, political, headImage, classId, idNum, passw" +
-                "ord, id FROM dbo.t_student where id= @id";
+            this._commandCollection[3].CommandText = "SELECT birth, classId, headImage, id, idNum, name, nation, password, political, s" +
+                "ex, sno FROM t_student WHERE (id = @id)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT name, sno, sex, birth, nation, political, headImage, classId, idNum, passw" +
-                "ord, id FROM dbo.t_student where sno=@sno and password=@password";
+            this._commandCollection[4].CommandText = "SELECT   birth, classId, headImage, id, idNum, name, nation, password, political," +
+                " sex, sno\r\nFROM      t_student\r\nWHERE   (sno = @sno) AND (password = @password)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sno", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "sno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = "INSERT INTO [dbo].[t_student] ([name], [sno], [sex], [birth], [nation], [politica" +
@@ -13538,40 +13539,40 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("sex", "sex");
             tableMapping.ColumnMappings.Add("birth", "birth");
             tableMapping.ColumnMappings.Add("title", "title");
-            tableMapping.ColumnMappings.Add("heahImage", "heahImage");
             tableMapping.ColumnMappings.Add("password", "password");
+            tableMapping.ColumnMappings.Add("headImage", "headImage");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[t_teacher] WHERE (([id] = @Original_id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [t_teacher] WHERE (([id] = @Original_id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[t_teacher] ([techNum], [teacherName], [sex], [birth], [title]," +
-                " [heahImage], [password]) VALUES (@techNum, @teacherName, @sex, @birth, @title, " +
-                "@heahImage, @password)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [t_teacher] ([techNum], [teacherName], [sex], [birth], [title], [pass" +
+                "word], [headImage]) VALUES (@techNum, @teacherName, @sex, @birth, @title, @passw" +
+                "ord, @headImage)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@techNum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "techNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teacherName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teacherName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sex", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@birth", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "birth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@heahImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "heahImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@headImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "headImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[t_teacher] SET [techNum] = @techNum, [teacherName] = @teacherName, " +
-                "[sex] = @sex, [birth] = @birth, [title] = @title, [heahImage] = @heahImage, [pas" +
-                "sword] = @password WHERE (([id] = @Original_id))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [t_teacher] SET [techNum] = @techNum, [teacherName] = @teacherName, [sex] " +
+                "= @sex, [birth] = @birth, [title] = @title, [password] = @password, [headImage] " +
+                "= @headImage WHERE (([id] = @Original_id))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@techNum", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "techNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teacherName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "teacherName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sex", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@birth", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "birth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@heahImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "heahImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@headImage", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "headImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -13588,8 +13589,8 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, techNum, teacherName, sex, birth, title, heahImage, password FROM dbo." +
-                "t_teacher";
+            this._commandCollection[0].CommandText = "SELECT   id, techNum, teacherName, sex, birth, title, password, headImage\r\nFROM  " +
+                "    t_teacher";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -13598,30 +13599,30 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT id, techNum, teacherName, sex, birth, title, heahImage, password FROM dbo." +
-                "t_teacher where id=@id";
+            this._commandCollection[2].CommandText = "SELECT birth, headImage, id, password, sex, teacherName, techNum, title FROM t_te" +
+                "acher WHERE (id = @id)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT id, techNum, teacherName, sex, birth, title, heahImage, password FROM dbo." +
-                "t_teacher where techNum=@techNum and password=@password";
+            this._commandCollection[3].CommandText = "SELECT birth, headImage, id, password, sex, teacherName, techNum, title FROM t_te" +
+                "acher WHERE (techNum = @techNum) AND (password = @password)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@techNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "techNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "INSERT INTO [dbo].[t_teacher] ([techNum], [teacherName], [sex], [birth], [title]," +
-                " [heahImage], [password]) VALUES (@techNum, @teacherName, @sex, @birth, @title, " +
-                "@heahImage, @password)";
+                " [headImage], [password]) VALUES (@techNum, @teacherName, @sex, @birth, @title, " +
+                "@headImage, @password)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@techNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "techNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@teacherName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "teacherName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sex", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@birth", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "birth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@heahImage", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "heahImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 1, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@headImage", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "headImage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
             this._commandCollection[5].CommandText = "UPDATE [dbo].[t_teacher] SET [techNum] = @techNum, [teacherName] = @teacherName, " +
@@ -13781,7 +13782,7 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int techNum, string teacherName, string sex, string birth, string title, string heahImage, string password) {
+        public virtual int Insert(int techNum, string teacherName, string sex, string birth, string title, string password, string headImage) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(techNum));
             if ((teacherName == null)) {
                 throw new global::System.ArgumentNullException("teacherName");
@@ -13807,17 +13808,17 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(title));
             }
-            if ((heahImage == null)) {
+            if ((password == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(heahImage));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(password));
             }
-            if ((password == null)) {
+            if ((headImage == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(password));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(headImage));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13839,7 +13840,7 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int techNum, string teacherName, string sex, string birth, string title, string heahImage, string password, int Original_id) {
+        public virtual int Update(int techNum, string teacherName, string sex, string birth, string title, string password, string headImage, int Original_id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(techNum));
             if ((teacherName == null)) {
                 throw new global::System.ArgumentNullException("teacherName");
@@ -13865,17 +13866,17 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(title));
             }
-            if ((heahImage == null)) {
+            if ((password == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(heahImage));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(password));
             }
-            if ((password == null)) {
+            if ((headImage == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(password));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(headImage));
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -13922,7 +13923,7 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertTeacher(int techNum, string teacherName, string sex, string birth, string title, string heahImage, string password) {
+        public virtual int InsertTeacher(int techNum, string teacherName, string sex, string birth, string title, string headImage, string password) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             command.Parameters[0].Value = ((int)(techNum));
             if ((teacherName == null)) {
@@ -13949,11 +13950,11 @@ namespace SGMSystem.App_Code.DataSetTableAdapters {
             else {
                 command.Parameters[4].Value = ((string)(title));
             }
-            if ((heahImage == null)) {
+            if ((headImage == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(heahImage));
+                command.Parameters[5].Value = ((string)(headImage));
             }
             if ((password == null)) {
                 command.Parameters[6].Value = global::System.DBNull.Value;
