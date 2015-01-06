@@ -7,7 +7,7 @@
     <asp:TreeView ID="menuTree" runat="server">
     </asp:TreeView>
 </div>
-<div class="span10" align="right" style="padding-top: 25px">   
+<div class="span10" align="right">   
      <div align="right" style="padding-top: 25px">
         <asp:Button ID="btnStudentAdd" class="btn btn-sm btn-primary" runat="server" Text="添加"
             OnClick="btnStudentAdd_Click" />

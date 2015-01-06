@@ -28,25 +28,24 @@
              </tr> 
              <tr>
                 <td align="right">                              
-                    学院号： 
+                    学院名： 
                 </td>
                 <td>
-                    <asp:TextBox ID="txtAcademyId" runat="server"></asp:TextBox>
+                    <asp:DropDownList ID="ddlAcademyName" runat="server" 
+                        DataSourceID="SqlforAcademyName" DataTextField="academyName" 
+                        DataValueField="id">
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlforAcademyName" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:db_SGMSConnectionString %>" 
+                        SelectCommand="SELECT [id], [academyName] FROM [t_academy]">
+                    </asp:SqlDataSource>
                 </td>
             </tr>         
             <tr>
                 <td align="right">
                 </td>
                 <td>
-                    <asp:Button ID="btnMajorSave" class="btn btn-success" style="width: 66%" 
-                        runat="server" Text="确定" onclick="btnMajorSave_Click" />
-                </td>
-            </tr>
-            <tr>
-                <td align="right">
-                </td>
-                <td>
-                     <input id="btnReturn" class="btn btn-success" style="width: 66%"  onclick="javascript:window.location.href='majorList.aspx'" type="button" value="返回" />  
+                    <asp:Button ID="btnMajorSave" class="btn btn-success" Width="220px" runat="server" Text="确定" onclick="btnMajorSave_Click" />
                 </td>
             </tr>
         </table>

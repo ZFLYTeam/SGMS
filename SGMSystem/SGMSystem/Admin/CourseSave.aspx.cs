@@ -17,15 +17,13 @@ namespace SGMSystem
         {
             if (!IsPostBack) 
             {
-                treeViewUtil t = new treeViewUtil();
-                t.getTreeView(menuTree);
                 int id = Convert.ToInt32(Context.Request["id"]);
                 if (Context.Request["id"] != null)
                 {
                     DataTable dt = t_courseTA.GetCourseById(id);
                     ddlProperty.SelectedItem.Text = dt.Rows[0]["property"].ToString();
                     txtCourseyName.Text = dt.Rows[0]["courseName"].ToString();
-                    txtAcademyId.Text = dt.Rows[0]["AcademyId"].ToString();
+                    ddlAcademyName.SelectedValue= dt.Rows[0]["AcademyId"].ToString();
                 }
             }
         }
@@ -35,16 +33,13 @@ namespace SGMSystem
             if (Context.Request["id"] != null)
             {
                 int id = Convert.ToInt32(Context.Request["id"]);
-
-                // DataTable dt = t_courseTA.GetCourseById(id);
-
-                t_courseTA.UpdateCourse(Convert.ToInt32(txtAcademyId.Text), Convert.ToInt32(txtCourseyName.Text), ddlProperty.SelectedItem.Text, id);
+                t_courseTA.UpdateCourse(Convert.ToInt32(ddlAcademyName.SelectedValue), Convert.ToInt32(txtCourseyName.Text), ddlProperty.SelectedItem.Text, id);
                 Response.Redirect("CourseList.aspx");
             }
             else
             {
 
-                t_courseTA.InsertCourse(Convert.ToInt32(txtAcademyId.Text), Convert.ToInt32(txtCourseyName.Text), ddlProperty.SelectedItem.Text);
+                t_courseTA.InsertCourse(Convert.ToInt32(ddlAcademyName.SelectedValue),txtCourseyName.Text, ddlProperty.SelectedItem.Text);
                 Response.Redirect("CourseList.aspx");
             }
         }

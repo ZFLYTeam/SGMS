@@ -16,8 +16,6 @@ namespace SGMSystem
         {
             if (!IsPostBack) 
             {
-                treeViewUtil t = new treeViewUtil();
-                t.getTreeView(menuTree);
                 DataTable dt = t_teacherTableAdapte.GetData();
                 listTeacher.DataSource = dt;
                 listTeacher.DataBind();

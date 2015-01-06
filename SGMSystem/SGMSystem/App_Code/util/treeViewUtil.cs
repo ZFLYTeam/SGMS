@@ -63,7 +63,7 @@ namespace SGMSystem
                     var node2 = dr[0] = Guid.NewGuid();//专业根节点
                     dr[1] = node1;//（专业节点）属于学院根节点
                     dr[2] = major[j];
-                    //dr[3] = "classList.aspx?majorId=" + majorId[j];//该节点的url
+                    dr[3] = "classList.aspx?majorId=" + majorId[j];//该节点的url
                     dt.Rows.Add(dr);
                     //构造 班级 节点
                     List<string> classs = new List<string>();

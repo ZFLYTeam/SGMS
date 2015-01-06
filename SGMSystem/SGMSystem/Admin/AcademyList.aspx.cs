@@ -51,8 +51,14 @@ namespace SGMSystem
             }
             ///点击删除按钮
             else if (e.CommandName == "delete") {
-                t_academyTa.DeleteAcademy(id);
-                Response.Redirect("AcademyList.aspx");
+                try
+                {
+                    t_academyTa.DeleteAcademy(id);
+                    Response.Redirect("AcademyList.aspx");
+                }
+                catch {
+                    Response.Write("<script>confirm('该学院里有专业信息，无法删除');</script>");
+                }
             }
         }
     }

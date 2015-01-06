@@ -33,10 +33,10 @@
                 </td>
 --%>
 <div class="span10" align="right">   
-     <div align="right">
-        <asp:Button ID="btnSelectCoursetAdd" class="btn btn-sm btn-primary" runat="server" Text="添加"
-            OnClick="btnSelectCoursetAdd_Click" />
-     </div>
+<%--    <div align="right">
+    <asp:Button ID="btnSelectCoursetAdd" class="btn btn-sm btn-primary" runat="server" Text="添加"
+        OnClick="btnSelectCoursetAdd_Click" />
+    </div>--%>
     <div style="padding-top: 25px">
 
 <asp:Repeater ID="listSelectCourse" runat="server" OnItemCommand="listSelectCourse_ItemCommand" >
@@ -44,7 +44,7 @@
                 <div class="data_content">
                     <table class="table table-bordered table-hover" style="table-layout: fixed;">
                         <tr>
-                            <th width="7%">
+                            <th width="6%">
                                 姓名
                             </th>
                             <th width="12%">
@@ -65,13 +65,7 @@
                             <th width="5%">
                                 学时
                             </th>
-                            <th width="7%">
-                                平时分数
-                            </th>
-                            <th width="7%">
-                                考试分数
-                            </th>
-                             <th width="7%">
+                             <th width="10%">
                                 操作
                             </th>
                         </tr>
@@ -98,13 +92,7 @@
                     </td>
                     <td>
                        <%#Eval("creditHours")%>
-                     </td>
-                    <td>
-                       <%#Eval("usualScore")%>
-                    </td>
-                   <td>
-                       <%#Eval("testScore")%>
-                    </td>               
+                     </td>             
               
                     <td>
                         <asp:Button ID="btnDelete" class="btn btn-mini  btn-danger" CommandArgument='<%#Eval("id")%>'

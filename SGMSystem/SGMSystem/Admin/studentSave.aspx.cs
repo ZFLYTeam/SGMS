@@ -42,7 +42,7 @@ namespace SGMSystem
                     txt_nation.Text = dt.Rows[0]["nation"].ToString();
                     txt_political.Text = dt.Rows[0]["political"].ToString();
                     txt_headImage.Text = dt.Rows[0]["headImage"].ToString();
-                    ddlClass.SelectedItem.Text= dt.Rows[0]["className"].ToString();
+                    ddlClass.SelectedValue= dt.Rows[0]["id"].ToString();
                     txt_idNum.Text = dt.Rows[0]["idNum"].ToString();
              
                 }

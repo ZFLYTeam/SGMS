@@ -33,6 +33,7 @@
       .form-signin .checkbox {
         margin-bottom: 10px;
       }
+      .form-signin span,
       .form-signin input[type="text"],
       .form-signin input[type="password"] {
         font-size: 16px;
@@ -55,6 +56,9 @@
             <asp:ListItem Value="1">教师</asp:ListItem>
             <asp:ListItem Value="2">管理员</asp:ListItem>
         </asp:DropDownList>
+        <asp:TextBox ID="txtValidateCode" class="input" placeholder="请输入验证码" required runat="server"></asp:TextBox>
+        <span id="code" onselectstart="return false" onclick="divclick()" class="badge badge-info"></span>
+        <asp:TextBox ID="txtCode" runat="server" style="display:none"></asp:TextBox>
         <asp:Label ID="lblTips" runat="server" Text="学生用户名为学号，老师用户名为教职工号"></asp:Label>
         <asp:Button ID="btnLogin" class="btn btn-large btn-primary" style="width:300px" 
             runat="server" Text="登录" onclick="btnLogin_Click"/>
@@ -64,5 +68,24 @@
     <script type="text/javascript" src="libs/bootstrap/js/jquery.min.js"></script>
     <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="libs/bootstrap-select/js/bootstrap-select.js"></script>
+    <script type="text/javascript">
+            var number1 = '';
+            var color = '#';
+            for (var i = 0; i < 4; i++) { number1 += parseInt(Math.random() * 10); }
+            for (var i = 0; i < 6; i++) { color += parseInt(Math.random() * 9); }
+            document.getElementById("code").style.backgroundColor = color;
+            document.getElementById("code").innerHTML = number1;
+            document.getElementById("txtCode").value = number1;
+            function divclick() {
+                var number1 = '';
+                var color = '#';
+                for (var i = 0; i < 4; i++) { number1 += parseInt(Math.random() * 10); }
+                for (var i = 0; i < 6; i++) { color += parseInt(Math.random() * 9); }
+                document.getElementById("code").style.backgroundColor = color;
+                document.getElementById("code").innerHTML = number1;
+                document.getElementById("txtCode").value = number1;
+                return number1;
+            }
+     </script>  
 </body>
 </html>

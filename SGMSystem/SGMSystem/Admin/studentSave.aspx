@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="studentSave.aspx.cs" Inherits="SGMSystem.studentSave" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<link href="../libs/datePicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 <div class="row">
@@ -42,7 +43,10 @@
                     出生日期：
                 </td>
                 <td>
+                    <div class="controls input-append date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                     <asp:TextBox ID="txt_birth" runat="server"></asp:TextBox>
+					<span class="add-on"><i class="icon-th"></i></span>
+                </div>
                 </td>
             </tr>
             <tr>
@@ -103,4 +107,18 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
+<script type="text/javascript" src="../libs/datePicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../libs/datePicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_date').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    });
+</script>
 </asp:Content>

@@ -217,52 +217,6 @@
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_SCTableAdapter" GeneratorDataComponentClassName="view_SCTableAdapter" Name="view_SC" UserDataComponentName="view_SCTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="db_SGMS.dbo.view_SC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, name, sno, courseName, property, teacherName, credit, creditHours, usualScore, testScore FROM dbo.view_SC</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="name" DataSetColumn="name" />
-              <Mapping SourceColumn="sno" DataSetColumn="sno" />
-              <Mapping SourceColumn="courseName" DataSetColumn="courseName" />
-              <Mapping SourceColumn="property" DataSetColumn="property" />
-              <Mapping SourceColumn="teacherName" DataSetColumn="teacherName" />
-              <Mapping SourceColumn="credit" DataSetColumn="credit" />
-              <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
-              <Mapping SourceColumn="usualScore" DataSetColumn="usualScore" />
-              <Mapping SourceColumn="testScore" DataSetColumn="testScore" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_techCourseTableAdapter" GeneratorDataComponentClassName="view_techCourseTableAdapter" Name="view_techCourse" UserDataComponentName="view_techCourseTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="db_SGMS.dbo.view_techCourse" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT id, teacherName, courseName, credit, creditHours, academyName FROM dbo.view_techCourse</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="teacherName" DataSetColumn="teacherName" />
-              <Mapping SourceColumn="courseName" DataSetColumn="courseName" />
-              <Mapping SourceColumn="credit" DataSetColumn="credit" />
-              <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
-              <Mapping SourceColumn="academyName" DataSetColumn="academyName" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="t_scTableAdapter" GeneratorDataComponentClassName="t_scTableAdapter" Name="t_sc" UserDataComponentName="t_scTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="db_SGMS.dbo.t_sc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -346,7 +300,18 @@
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateSc" Modifier="Public" Name="UpdateSc" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateSc">
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertScBySC" Modifier="Public" Name="InsertScBySC" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertScBySC">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[t_sc] ([stuId], [cmId]) VALUES (@stuId, @cmId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="stuId" ColumnName="stuId" DataSourceName="db_SGMS.dbo.t_sc" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@stuId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="stuId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="cmId" ColumnName="cmId" DataSourceName="db_SGMS.dbo.t_sc" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cmId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="cmId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateSc" Modifier="Public" Name="UpdateSc" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateSc">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[t_sc] SET [stuId] = @stuId, [cmId] = @cmId, [usualScore] = @usualScore, [testScore] = @testScore WHERE (([id] = @Original_id))</CommandText>
@@ -378,7 +343,7 @@
                     <CommandText>INSERT INTO [dbo].[t_course] ([academyId], [courseName], [property]) VALUES (@academyId, @courseName, @property)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@academyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="academyId" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@property" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="property" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -394,7 +359,7 @@
                     <CommandText>UPDATE [dbo].[t_course] SET [academyId] = @academyId, [courseName] = @courseName, [property] = @property WHERE (([id] = @Original_id))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@academyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="academyId" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@property" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="property" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -435,7 +400,7 @@
                     <CommandText>INSERT INTO [dbo].[t_course] ([academyId], [courseName], [property]) VALUES (@academyId, @courseName, @property)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="academyId" ColumnName="academyId" DataSourceName="db_SGMS.dbo.t_course" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@academyId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="academyId" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="courseName" ColumnName="courseName" DataSourceName="db_SGMS.dbo.t_course" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="courseName" ColumnName="courseName" DataSourceName="db_SGMS.dbo.t_course" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="property" ColumnName="property" DataSourceName="db_SGMS.dbo.t_course" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@property" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="property" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -553,6 +518,29 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="termId" ColumnName="termId" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@termId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="termId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="credit" ColumnName="credit" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@credit" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="credit" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="creditHours" ColumnName="creditHours" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@creditHours" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="creditHours" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateCourseManage1" Modifier="Public" Name="UpdateCourseManage1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateCourseManage1">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE  t_courseManage
+SET         teacherId = NULL
+WHERE   (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateTCourseManageByTeacherChoose" Modifier="Public" Name="UpdateTCourseManageByTeacherChoose" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateTCourseManageByTeacherChoose">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[t_courseManage] SET [teacherId] = @teacherId WHERE (([id] = @Original_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="teacherId" ColumnName="teacherId" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@teacherId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="teacherId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.t_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
@@ -795,6 +783,17 @@ WHERE   (sno = @sno) AND (password = @password)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateStudentPwd" Modifier="Public" Name="UpdateStudentPwd" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateStudentPwd">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [t_student] SET [password] = @password WHERE (([id] = @Original_id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="password" ColumnName="password" DataSourceName="db_SGMS.dbo.t_student" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.t_student" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="t_classTableAdapter" GeneratorDataComponentClassName="t_classTableAdapter" Name="t_class" UserDataComponentName="t_classTableAdapter">
@@ -886,11 +885,10 @@ FROM      t_class</CommandText>
               <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateClass" Modifier="Public" Name="UpdateClass" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateClass">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE [dbo].[t_class] SET [majorId] = @majorId, [classNum] = @classNum, [grade] = @grade WHERE (([id] = @Original_id))</CommandText>
+                    <CommandText>UPDATE [dbo].[t_class] SET [majorId] = @majorId, [className] = @className WHERE (([id] = @Original_id))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="majorId" ColumnName="majorId" DataSourceName="db_SGMS.dbo.t_class" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@majorId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="majorId" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="classNum" ColumnName="classNum" DataSourceName="db_SGMS.dbo.t_class" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@classNum" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="classNum" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="grade" ColumnName="grade" DataSourceName="db_SGMS.dbo.t_class" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@grade" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="grade" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="className" ColumnName="className" DataSourceName="db_SGMS.dbo.t_class" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@className" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="className" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.t_class" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
@@ -1008,15 +1006,15 @@ FROM      t_teacher</CommandText>
               <DbSource ConnectionRef="db_SGMSConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateTeacher" Modifier="Public" Name="UpdateTeacher" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateTeacher">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE [dbo].[t_teacher] SET [techNum] = @techNum, [teacherName] = @teacherName, [sex] = @sex, [birth] = @birth, [title] = @title, [heahImage] = @heahImage, [password] = @password WHERE (([id] = @Original_id))</CommandText>
+                    <CommandText>UPDATE [dbo].[t_teacher] SET [techNum] = @techNum, [teacherName] = @teacherName, [sex] = @sex, [birth] = @birth, [title] = @title, [headImage] = @headImage, [password] = @password WHERE (([id] = @Original_id))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="techNum" ColumnName="techNum" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@techNum" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="techNum" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="teacherName" ColumnName="teacherName" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@teacherName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="teacherName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="sex" ColumnName="sex" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@sex" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="sex" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="birth" ColumnName="birth" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@birth" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="birth" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="title" ColumnName="title" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@title" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="title" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="heahImage" ColumnName="heahImage" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@heahImage" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="heahImage" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="password" ColumnName="password" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(1)" DbType="AnsiString" Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar" Scale="0" Size="1" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="headImage" ColumnName="headImage" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@headImage" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="headImage" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="password" ColumnName="password" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@password" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="password" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.t_teacher" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
@@ -1206,91 +1204,11 @@ FROM      t_teacher</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_courseManageTableAdapter" GeneratorDataComponentClassName="view_courseManageTableAdapter" Name="view_courseManage" UserDataComponentName="view_courseManageTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_courseManage" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT majorName, id, courseName, creditHours, credit, termName, academyName FROM dbo.view_courseManage</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="majorName" DataSetColumn="majorName" />
-              <Mapping SourceColumn="id" DataSetColumn="id" />
-              <Mapping SourceColumn="courseName" DataSetColumn="courseName" />
-              <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
-              <Mapping SourceColumn="credit" DataSetColumn="credit" />
-              <Mapping SourceColumn="termName" DataSetColumn="termName" />
-              <Mapping SourceColumn="academyName" DataSetColumn="academyName" />
-            </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>DELETE FROM [dbo].[view_courseManage] WHERE (([id] = @Original_id))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-              </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT  t_major.majorName, t_course.id, t_course.courseName, t_courseManage.creditHours, t_courseManage.credit, t_term.termName, 
-               t_academy.academyName
-FROM     t_academy INNER JOIN
-               t_course ON t_academy.id = t_course.academyId INNER JOIN
-               t_courseManage ON t_course.id = t_courseManage.courseId INNER JOIN
-               t_major ON t_academy.id = t_major.academyId INNER JOIN
-               t_term ON t_courseManage.termId = t_term.id</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQuery" Modifier="Public" Name="InsertQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertQuery">
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO [dbo].[view_courseManage] ([majorName], [id], [courseName],[creditHours],[credit],[termName],[academyName]) VALUES (@majorName, @id, @courseName,@creditHours,@credit,@termName,@academyName)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="majorName" ColumnName="majorName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@majorName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="majorName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="courseName" ColumnName="courseName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="creditHours" ColumnName="creditHours" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@creditHours" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="creditHours" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="credit" ColumnName="credit" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@credit" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="credit" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="termName" ColumnName="termName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@termName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="termName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="academyName" ColumnName="academyName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@academyName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="academyName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-              </DbSource>
-              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQuery" Modifier="Public" Name="UpdateQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="UpdateQuery">
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>UPDATE [dbo].[view_courseManage] SET [majorName] = @majorName, [id] = @id, [courseName] = @courseName, [creditHours] = @creditHours, [credit]= @credit, [termName]= @termName, [academyName]= @academyName WHERE (([id] = @Original_id))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="majorName" ColumnName="majorName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@majorName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="majorName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="courseName" ColumnName="courseName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@courseName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="courseName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="creditHours" ColumnName="creditHours" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@creditHours" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="creditHours" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="credit" ColumnName="credit" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@credit" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="credit" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="termName" ColumnName="termName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@termName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="termName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="academyName" ColumnName="academyName" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@academyName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="academyName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Original_id" ColumnName="id" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </Sources>
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_studentTableAdapter" GeneratorDataComponentClassName="view_studentTableAdapter" Name="view_student" UserDataComponentName="view_studentTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_student" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT id, name, sno, sex, birth, nation, political, headImage, idNum, className, majorName, academyName FROM dbo.view_student</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -1311,7 +1229,146 @@ FROM     t_academy INNER JOIN
               <Mapping SourceColumn="majorName" DataSetColumn="majorName" />
               <Mapping SourceColumn="academyName" DataSetColumn="academyName" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_student" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillById" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GeneratorSourceName="FillById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="FillById">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT academyName, birth, className, headImage, id, idNum, majorName, name, nation, political, sex, sno FROM view_student WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="db_SGMS.dbo.view_student" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_courseManageTableAdapter" GeneratorDataComponentClassName="view_courseManageTableAdapter" Name="view_courseManage" UserDataComponentName="view_courseManageTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_courseManage" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT majorName, id, courseName, creditHours, credit, termName, academyName, property, courseId, teacherId, termId, majorNum, academyId FROM dbo.view_courseManage</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="majorName" DataSetColumn="majorName" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="courseName" DataSetColumn="courseName" />
+              <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+              <Mapping SourceColumn="termName" DataSetColumn="termName" />
+              <Mapping SourceColumn="academyName" DataSetColumn="academyName" />
+              <Mapping SourceColumn="property" DataSetColumn="property" />
+              <Mapping SourceColumn="courseId" DataSetColumn="courseId" />
+              <Mapping SourceColumn="teacherId" DataSetColumn="teacherId" />
+              <Mapping SourceColumn="termId" DataSetColumn="termId" />
+              <Mapping SourceColumn="majorNum" DataSetColumn="majorNum" />
+              <Mapping SourceColumn="academyId" DataSetColumn="academyId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_courseManage" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetViewCourseManageByTeacherIdIsNull" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetViewCourseManageByTeacherIdIsNull" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetViewCourseManageByTeacherIdIsNull" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT majorName, id, courseName, creditHours, credit, termName, academyName, property, courseId, teacherId, termId, majorNum, academyId FROM dbo.view_courseManage where teacherId is null</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_courseManage" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByTeachCourseResult" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetTeachCourseResultByTeacherId" GeneratorSourceName="FillByTeachCourseResult" GetMethodModifier="Public" GetMethodName="GetTeachCourseResultByTeacherId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetTeachCourseResultByTeacherId" UserSourceName="FillByTeachCourseResult">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   majorName, id, courseName, creditHours, credit, termName, academyName, teacherId
+FROM      view_courseManage
+WHERE   (teacherId = @teacherId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="teacherId" ColumnName="teacherId" DataSourceName="db_SGMS.dbo.view_courseManage" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@teacherId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="teacherId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_techCourseTableAdapter" GeneratorDataComponentClassName="view_techCourseTableAdapter" Name="view_techCourse" UserDataComponentName="view_techCourseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_techCourse" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT teacherName, courseName, credit, creditHours, academyName, academyId, courseId, teacherId, termId, id FROM dbo.view_techCourse</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="teacherName" DataSetColumn="teacherName" />
+              <Mapping SourceColumn="courseName" DataSetColumn="courseName" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+              <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
+              <Mapping SourceColumn="academyName" DataSetColumn="academyName" />
+              <Mapping SourceColumn="academyId" DataSetColumn="academyId" />
+              <Mapping SourceColumn="courseId" DataSetColumn="courseId" />
+              <Mapping SourceColumn="teacherId" DataSetColumn="teacherId" />
+              <Mapping SourceColumn="termId" DataSetColumn="termId" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_techCourse" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByAcademyName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAcademyName" GeneratorSourceName="FillByAcademyName" GetMethodModifier="Public" GetMethodName="GetDataByAcademyName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAcademyName" UserSourceName="FillByAcademyName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   teacherName, courseName, credit, creditHours, academyName, id, academyId, termName
+FROM      view_techCourse
+WHERE   (academyName = @academyName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="academyName" ColumnName="academyName" DataSourceName="db_SGMS.dbo.view_techCourse" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@academyName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="academyName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_SCTableAdapter" GeneratorDataComponentClassName="view_SCTableAdapter" Name="view_SC" UserDataComponentName="view_SCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_SC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT name, sno, courseName, property, teacherName, credit, creditHours, usualScore, testScore, stuId, cmId, id, termId, teacherId, termName FROM dbo.view_SC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="sno" DataSetColumn="sno" />
+              <Mapping SourceColumn="courseName" DataSetColumn="courseName" />
+              <Mapping SourceColumn="property" DataSetColumn="property" />
+              <Mapping SourceColumn="teacherName" DataSetColumn="teacherName" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+              <Mapping SourceColumn="creditHours" DataSetColumn="creditHours" />
+              <Mapping SourceColumn="usualScore" DataSetColumn="usualScore" />
+              <Mapping SourceColumn="testScore" DataSetColumn="testScore" />
+              <Mapping SourceColumn="stuId" DataSetColumn="stuId" />
+              <Mapping SourceColumn="cmId" DataSetColumn="cmId" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="termId" DataSetColumn="termId" />
+              <Mapping SourceColumn="teacherId" DataSetColumn="teacherId" />
+              <Mapping SourceColumn="termName" DataSetColumn="termName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="db_SGMSConnectionString1 (Web.config)" DbObjectName="db_SGMS.dbo.view_SC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByStuId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByStuId" GeneratorSourceName="FillByStuId" GetMethodModifier="Public" GetMethodName="GetDataByStuId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByStuId" UserSourceName="FillByStuId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT name, sno, courseName, property, teacherName, credit, creditHours, usualScore, testScore, stuId, cmId, id, termId, teacherId, termName FROM dbo.view_SC where stuId=@stuId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="stuId" ColumnName="stuId" DataSourceName="db_SGMS.dbo.view_SC" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@stuId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="stuId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -1337,70 +1394,6 @@ FROM     t_academy INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_SC" msprop:Generator_TableClassName="view_SCDataTable" msprop:Generator_TableVarName="tableview_SC" msprop:Generator_TablePropName="view_SC" msprop:Generator_RowDeletingName="view_SCRowDeleting" msprop:Generator_RowChangingName="view_SCRowChanging" msprop:Generator_RowEvHandlerName="view_SCRowChangeEventHandler" msprop:Generator_RowDeletedName="view_SCRowDeleted" msprop:Generator_UserTableName="view_SC" msprop:Generator_RowChangedName="view_SCRowChanged" msprop:Generator_RowEvArgName="view_SCRowChangeEvent" msprop:Generator_RowClassName="view_SCRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="sno" msprop:Generator_ColumnVarNameInTable="columnsno" msprop:Generator_ColumnPropNameInRow="sno" msprop:Generator_ColumnPropNameInTable="snoColumn" msprop:Generator_UserColumnName="sno">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" type="xs:int" />
-              <xs:element name="property" msprop:Generator_ColumnVarNameInTable="columnproperty" msprop:Generator_ColumnPropNameInRow="property" msprop:Generator_ColumnPropNameInTable="propertyColumn" msprop:Generator_UserColumnName="property">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="teacherName" msprop:Generator_ColumnVarNameInTable="columnteacherName" msprop:Generator_ColumnPropNameInRow="teacherName" msprop:Generator_ColumnPropNameInTable="teacherNameColumn" msprop:Generator_UserColumnName="teacherName">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:double" minOccurs="0" />
-              <xs:element name="creditHours" msprop:Generator_ColumnVarNameInTable="columncreditHours" msprop:Generator_ColumnPropNameInRow="creditHours" msprop:Generator_ColumnPropNameInTable="creditHoursColumn" msprop:Generator_UserColumnName="creditHours" type="xs:int" minOccurs="0" />
-              <xs:element name="usualScore" msprop:Generator_ColumnVarNameInTable="columnusualScore" msprop:Generator_ColumnPropNameInRow="usualScore" msprop:Generator_ColumnPropNameInTable="usualScoreColumn" msprop:Generator_UserColumnName="usualScore" type="xs:double" minOccurs="0" />
-              <xs:element name="testScore" msprop:Generator_ColumnVarNameInTable="columntestScore" msprop:Generator_ColumnPropNameInRow="testScore" msprop:Generator_ColumnPropNameInTable="testScoreColumn" msprop:Generator_UserColumnName="testScore" type="xs:double" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="view_techCourse" msprop:Generator_TableClassName="view_techCourseDataTable" msprop:Generator_TableVarName="tableview_techCourse" msprop:Generator_TablePropName="view_techCourse" msprop:Generator_RowDeletingName="view_techCourseRowDeleting" msprop:Generator_RowChangingName="view_techCourseRowChanging" msprop:Generator_RowEvHandlerName="view_techCourseRowChangeEventHandler" msprop:Generator_RowDeletedName="view_techCourseRowDeleted" msprop:Generator_UserTableName="view_techCourse" msprop:Generator_RowChangedName="view_techCourseRowChanged" msprop:Generator_RowEvArgName="view_techCourseRowChangeEvent" msprop:Generator_RowClassName="view_techCourseRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="teacherName" msprop:Generator_ColumnVarNameInTable="columnteacherName" msprop:Generator_ColumnPropNameInRow="teacherName" msprop:Generator_ColumnPropNameInTable="teacherNameColumn" msprop:Generator_UserColumnName="teacherName">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" type="xs:int" />
-              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:double" minOccurs="0" />
-              <xs:element name="creditHours" msprop:Generator_ColumnVarNameInTable="columncreditHours" msprop:Generator_ColumnPropNameInRow="creditHours" msprop:Generator_ColumnPropNameInTable="creditHoursColumn" msprop:Generator_UserColumnName="creditHours" type="xs:int" minOccurs="0" />
-              <xs:element name="academyName" msprop:Generator_ColumnVarNameInTable="columnacademyName" msprop:Generator_ColumnPropNameInRow="academyName" msprop:Generator_ColumnPropNameInTable="academyNameColumn" msprop:Generator_UserColumnName="academyName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="t_sc" msprop:Generator_TableClassName="t_scDataTable" msprop:Generator_TableVarName="tablet_sc" msprop:Generator_TablePropName="t_sc" msprop:Generator_RowDeletingName="t_scRowDeleting" msprop:Generator_RowChangingName="t_scRowChanging" msprop:Generator_RowEvHandlerName="t_scRowChangeEventHandler" msprop:Generator_RowDeletedName="t_scRowDeleted" msprop:Generator_UserTableName="t_sc" msprop:Generator_RowChangedName="t_scRowChanged" msprop:Generator_RowEvArgName="t_scRowChangeEvent" msprop:Generator_RowClassName="t_scRow">
           <xs:complexType>
             <xs:sequence>
@@ -1416,7 +1409,13 @@ FROM     t_academy INNER JOIN
           <xs:complexType>
             <xs:sequence>
               <xs:element name="academyId" msprop:Generator_ColumnVarNameInTable="columnacademyId" msprop:Generator_ColumnPropNameInRow="academyId" msprop:Generator_ColumnPropNameInTable="academyIdColumn" msprop:Generator_UserColumnName="academyId" type="xs:int" minOccurs="0" />
-              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" type="xs:string" minOccurs="0" />
+              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="property" msprop:Generator_ColumnVarNameInTable="columnproperty" msprop:Generator_ColumnPropNameInRow="property" msprop:Generator_ColumnPropNameInTable="propertyColumn" msprop:Generator_UserColumnName="property">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1667,43 +1666,6 @@ FROM     t_academy INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_courseManage" msprop:Generator_TableClassName="view_courseManageDataTable" msprop:Generator_TableVarName="tableview_courseManage" msprop:Generator_TablePropName="view_courseManage" msprop:Generator_RowDeletingName="view_courseManageRowDeleting" msprop:Generator_RowChangingName="view_courseManageRowChanging" msprop:Generator_RowEvHandlerName="view_courseManageRowChangeEventHandler" msprop:Generator_RowDeletedName="view_courseManageRowDeleted" msprop:Generator_UserTableName="view_courseManage" msprop:Generator_RowChangedName="view_courseManageRowChanged" msprop:Generator_RowEvArgName="view_courseManageRowChangeEvent" msprop:Generator_RowClassName="view_courseManageRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="majorName" msprop:Generator_ColumnVarNameInTable="columnmajorName" msprop:Generator_ColumnPropNameInRow="majorName" msprop:Generator_ColumnPropNameInTable="majorNameColumn" msprop:Generator_UserColumnName="majorName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="creditHours" msprop:Generator_ColumnVarNameInTable="columncreditHours" msprop:Generator_ColumnPropNameInRow="creditHours" msprop:Generator_ColumnPropNameInTable="creditHoursColumn" msprop:Generator_UserColumnName="creditHours" type="xs:int" minOccurs="0" />
-              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:double" minOccurs="0" />
-              <xs:element name="termName" msprop:Generator_ColumnVarNameInTable="columntermName" msprop:Generator_ColumnPropNameInRow="termName" msprop:Generator_ColumnPropNameInTable="termNameColumn" msprop:Generator_UserColumnName="termName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="academyName" msprop:Generator_ColumnVarNameInTable="columnacademyName" msprop:Generator_ColumnPropNameInRow="academyName" msprop:Generator_ColumnPropNameInTable="academyNameColumn" msprop:Generator_UserColumnName="academyName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="view_student" msprop:Generator_TableClassName="view_studentDataTable" msprop:Generator_TableVarName="tableview_student" msprop:Generator_TablePropName="view_student" msprop:Generator_RowDeletingName="view_studentRowDeleting" msprop:Generator_RowChangingName="view_studentRowChanging" msprop:Generator_RowEvHandlerName="view_studentRowChangeEventHandler" msprop:Generator_RowDeletedName="view_studentRowDeleted" msprop:Generator_UserTableName="view_student" msprop:Generator_RowChangedName="view_studentRowChanged" msprop:Generator_RowEvArgName="view_studentRowChangeEvent" msprop:Generator_RowClassName="view_studentRow">
           <xs:complexType>
             <xs:sequence>
@@ -1722,7 +1684,7 @@ FROM     t_academy INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnPropNameInTable="sexColumn" msprop:Generator_UserColumnName="sex" minOccurs="0">
+              <xs:element name="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnPropNameInTable="sexColumn" msprop:Generator_UserColumnName="sex">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -1788,18 +1750,150 @@ FROM     t_academy INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="view_courseManage" msprop:Generator_TableClassName="view_courseManageDataTable" msprop:Generator_TableVarName="tableview_courseManage" msprop:Generator_RowChangedName="view_courseManageRowChanged" msprop:Generator_TablePropName="view_courseManage" msprop:Generator_RowDeletingName="view_courseManageRowDeleting" msprop:Generator_RowChangingName="view_courseManageRowChanging" msprop:Generator_RowEvHandlerName="view_courseManageRowChangeEventHandler" msprop:Generator_RowDeletedName="view_courseManageRowDeleted" msprop:Generator_RowClassName="view_courseManageRow" msprop:Generator_UserTableName="view_courseManage" msprop:Generator_RowEvArgName="view_courseManageRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="majorName" msprop:Generator_ColumnVarNameInTable="columnmajorName" msprop:Generator_ColumnPropNameInRow="majorName" msprop:Generator_ColumnPropNameInTable="majorNameColumn" msprop:Generator_UserColumnName="majorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="creditHours" msprop:Generator_ColumnVarNameInTable="columncreditHours" msprop:Generator_ColumnPropNameInRow="creditHours" msprop:Generator_ColumnPropNameInTable="creditHoursColumn" msprop:Generator_UserColumnName="creditHours" type="xs:int" minOccurs="0" />
+              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:double" minOccurs="0" />
+              <xs:element name="termName" msprop:Generator_ColumnVarNameInTable="columntermName" msprop:Generator_ColumnPropNameInRow="termName" msprop:Generator_ColumnPropNameInTable="termNameColumn" msprop:Generator_UserColumnName="termName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="academyName" msprop:Generator_ColumnVarNameInTable="columnacademyName" msprop:Generator_ColumnPropNameInRow="academyName" msprop:Generator_ColumnPropNameInTable="academyNameColumn" msprop:Generator_UserColumnName="academyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="property" msprop:Generator_ColumnVarNameInTable="columnproperty" msprop:Generator_ColumnPropNameInRow="property" msprop:Generator_ColumnPropNameInTable="propertyColumn" msprop:Generator_UserColumnName="property">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="courseId" msprop:Generator_ColumnVarNameInTable="columncourseId" msprop:Generator_ColumnPropNameInRow="courseId" msprop:Generator_ColumnPropNameInTable="courseIdColumn" msprop:Generator_UserColumnName="courseId" type="xs:int" minOccurs="0" />
+              <xs:element name="teacherId" msprop:Generator_ColumnVarNameInTable="columnteacherId" msprop:Generator_ColumnPropNameInRow="teacherId" msprop:Generator_ColumnPropNameInTable="teacherIdColumn" msprop:Generator_UserColumnName="teacherId" type="xs:int" minOccurs="0" />
+              <xs:element name="termId" msprop:Generator_ColumnVarNameInTable="columntermId" msprop:Generator_ColumnPropNameInRow="termId" msprop:Generator_ColumnPropNameInTable="termIdColumn" msprop:Generator_UserColumnName="termId" type="xs:int" minOccurs="0" />
+              <xs:element name="majorNum" msprop:Generator_ColumnVarNameInTable="columnmajorNum" msprop:Generator_ColumnPropNameInRow="majorNum" msprop:Generator_ColumnPropNameInTable="majorNumColumn" msprop:Generator_UserColumnName="majorNum" type="xs:int" minOccurs="0" />
+              <xs:element name="academyId" msprop:Generator_ColumnVarNameInTable="columnacademyId" msprop:Generator_ColumnPropNameInRow="academyId" msprop:Generator_ColumnPropNameInTable="academyIdColumn" msprop:Generator_UserColumnName="academyId" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_techCourse" msprop:Generator_TableClassName="view_techCourseDataTable" msprop:Generator_TableVarName="tableview_techCourse" msprop:Generator_RowChangedName="view_techCourseRowChanged" msprop:Generator_TablePropName="view_techCourse" msprop:Generator_RowDeletingName="view_techCourseRowDeleting" msprop:Generator_RowChangingName="view_techCourseRowChanging" msprop:Generator_RowEvHandlerName="view_techCourseRowChangeEventHandler" msprop:Generator_RowDeletedName="view_techCourseRowDeleted" msprop:Generator_RowClassName="view_techCourseRow" msprop:Generator_UserTableName="view_techCourse" msprop:Generator_RowEvArgName="view_techCourseRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="teacherName" msprop:Generator_ColumnVarNameInTable="columnteacherName" msprop:Generator_ColumnPropNameInRow="teacherName" msprop:Generator_ColumnPropNameInTable="teacherNameColumn" msprop:Generator_UserColumnName="teacherName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:double" minOccurs="0" />
+              <xs:element name="creditHours" msprop:Generator_ColumnVarNameInTable="columncreditHours" msprop:Generator_ColumnPropNameInRow="creditHours" msprop:Generator_ColumnPropNameInTable="creditHoursColumn" msprop:Generator_UserColumnName="creditHours" type="xs:int" minOccurs="0" />
+              <xs:element name="academyName" msprop:Generator_ColumnVarNameInTable="columnacademyName" msprop:Generator_ColumnPropNameInRow="academyName" msprop:Generator_ColumnPropNameInTable="academyNameColumn" msprop:Generator_UserColumnName="academyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="academyId" msprop:Generator_ColumnVarNameInTable="columnacademyId" msprop:Generator_ColumnPropNameInRow="academyId" msprop:Generator_ColumnPropNameInTable="academyIdColumn" msprop:Generator_UserColumnName="academyId" type="xs:int" minOccurs="0" />
+              <xs:element name="courseId" msprop:Generator_ColumnVarNameInTable="columncourseId" msprop:Generator_ColumnPropNameInRow="courseId" msprop:Generator_ColumnPropNameInTable="courseIdColumn" msprop:Generator_UserColumnName="courseId" type="xs:int" minOccurs="0" />
+              <xs:element name="teacherId" msprop:Generator_ColumnVarNameInTable="columnteacherId" msprop:Generator_ColumnPropNameInRow="teacherId" msprop:Generator_ColumnPropNameInTable="teacherIdColumn" msprop:Generator_UserColumnName="teacherId" type="xs:int" minOccurs="0" />
+              <xs:element name="termId" msprop:Generator_ColumnVarNameInTable="columntermId" msprop:Generator_ColumnPropNameInRow="termId" msprop:Generator_ColumnPropNameInTable="termIdColumn" msprop:Generator_UserColumnName="termId" type="xs:int" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_SC" msprop:Generator_TableClassName="view_SCDataTable" msprop:Generator_TableVarName="tableview_SC" msprop:Generator_RowChangedName="view_SCRowChanged" msprop:Generator_TablePropName="view_SC" msprop:Generator_RowDeletingName="view_SCRowDeleting" msprop:Generator_RowChangingName="view_SCRowChanging" msprop:Generator_RowEvHandlerName="view_SCRowChangeEventHandler" msprop:Generator_RowDeletedName="view_SCRowDeleted" msprop:Generator_RowClassName="view_SCRow" msprop:Generator_UserTableName="view_SC" msprop:Generator_RowEvArgName="view_SCRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sno" msprop:Generator_ColumnVarNameInTable="columnsno" msprop:Generator_ColumnPropNameInRow="sno" msprop:Generator_ColumnPropNameInTable="snoColumn" msprop:Generator_UserColumnName="sno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="courseName" msprop:Generator_ColumnVarNameInTable="columncourseName" msprop:Generator_ColumnPropNameInRow="courseName" msprop:Generator_ColumnPropNameInTable="courseNameColumn" msprop:Generator_UserColumnName="courseName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="property" msprop:Generator_ColumnVarNameInTable="columnproperty" msprop:Generator_ColumnPropNameInRow="property" msprop:Generator_ColumnPropNameInTable="propertyColumn" msprop:Generator_UserColumnName="property">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="teacherName" msprop:Generator_ColumnVarNameInTable="columnteacherName" msprop:Generator_ColumnPropNameInRow="teacherName" msprop:Generator_ColumnPropNameInTable="teacherNameColumn" msprop:Generator_UserColumnName="teacherName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:double" minOccurs="0" />
+              <xs:element name="creditHours" msprop:Generator_ColumnVarNameInTable="columncreditHours" msprop:Generator_ColumnPropNameInRow="creditHours" msprop:Generator_ColumnPropNameInTable="creditHoursColumn" msprop:Generator_UserColumnName="creditHours" type="xs:int" minOccurs="0" />
+              <xs:element name="usualScore" msprop:Generator_ColumnVarNameInTable="columnusualScore" msprop:Generator_ColumnPropNameInRow="usualScore" msprop:Generator_ColumnPropNameInTable="usualScoreColumn" msprop:Generator_UserColumnName="usualScore" type="xs:double" minOccurs="0" />
+              <xs:element name="testScore" msprop:Generator_ColumnVarNameInTable="columntestScore" msprop:Generator_ColumnPropNameInRow="testScore" msprop:Generator_ColumnPropNameInTable="testScoreColumn" msprop:Generator_UserColumnName="testScore" type="xs:double" minOccurs="0" />
+              <xs:element name="stuId" msprop:Generator_ColumnVarNameInTable="columnstuId" msprop:Generator_ColumnPropNameInRow="stuId" msprop:Generator_ColumnPropNameInTable="stuIdColumn" msprop:Generator_UserColumnName="stuId" type="xs:int" minOccurs="0" />
+              <xs:element name="cmId" msprop:Generator_ColumnVarNameInTable="columncmId" msprop:Generator_ColumnPropNameInRow="cmId" msprop:Generator_ColumnPropNameInTable="cmIdColumn" msprop:Generator_UserColumnName="cmId" type="xs:int" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="termId" msprop:Generator_ColumnVarNameInTable="columntermId" msprop:Generator_ColumnPropNameInRow="termId" msprop:Generator_ColumnPropNameInTable="termIdColumn" msprop:Generator_UserColumnName="termId" type="xs:int" minOccurs="0" />
+              <xs:element name="teacherId" msprop:Generator_ColumnVarNameInTable="columnteacherId" msprop:Generator_ColumnPropNameInRow="teacherId" msprop:Generator_ColumnPropNameInTable="teacherIdColumn" msprop:Generator_UserColumnName="teacherId" type="xs:int" minOccurs="0" />
+              <xs:element name="termName" msprop:Generator_ColumnVarNameInTable="columntermName" msprop:Generator_ColumnPropNameInRow="termName" msprop:Generator_ColumnPropNameInTable="termNameColumn" msprop:Generator_UserColumnName="termName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:t_major" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
-    <xs:unique name="view_SC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:view_SC" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
-    <xs:unique name="view_techCourse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:view_techCourse" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
     <xs:unique name="t_sc_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -1842,12 +1936,20 @@ FROM     t_academy INNER JOIN
       <xs:selector xpath=".//mstns:t_news" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
+    <xs:unique name="view_student_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_student" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
     <xs:unique name="view_courseManage_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:view_courseManage" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:unique name="view_student_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:view_student" />
+    <xs:unique name="view_techCourse_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_techCourse" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="view_SC_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_SC" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>

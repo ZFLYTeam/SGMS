@@ -41,7 +41,7 @@ namespace SGMSystem
                     txt_headImage.Text = dt.Rows[0]["headImage"].ToString();
                     txt_sex.Text = dt.Rows[0]["sex"].ToString();
                     txt_birth.Text = dt.Rows[0]["birth"].ToString();
-                    txt_class.Text = dt.Rows[0]["classNum"].ToString();
+                    txt_class.Text = dt.Rows[0]["className"].ToString();
                     txt_nation.Text = dt.Rows[0]["nation"].ToString();
                     txt_political.Text = dt.Rows[0]["political"].ToString();
                     txt_idNum.Text = dt.Rows[0]["idNum"].ToString();

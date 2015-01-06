@@ -26,7 +26,7 @@ namespace SGMSystem
                     txtSex.Text = dt.Rows[0]["sex"].ToString();
                     txtBirth.Text = dt.Rows[0]["birth"].ToString();
                     txtTitle.Text = dt.Rows[0]["title"].ToString();
-                    txtHeahImage.Text = dt.Rows[0]["heahImage"].ToString();
+                    txtHeahImage.Text = dt.Rows[0]["headImage"].ToString();
                     txtPassword.Text = dt.Rows[0]["password"].ToString();
                 }
             }

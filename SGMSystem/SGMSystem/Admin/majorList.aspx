@@ -44,7 +44,7 @@
                         <%#Eval("academyId")%>
                     </td>                
                     <td>
-                        <asp:Button ID="btnMajorDelete" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>' CommandName="delete" runat="server" Text="删除" />
+                        <asp:Button ID="btnMajorDelete" class="btn btn-mini  btn-danger" CommandArgument='<%#Eval("id")%>' CommandName="delete" runat="server" Text="删除" />
                         <asp:Button ID="btnMaorModify" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>' CommandName="modify" runat="server" Text="修改" />
                     </td>
                 </tr>

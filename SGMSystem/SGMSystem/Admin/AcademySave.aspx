@@ -22,9 +22,9 @@
                         <div class="control-group">
                             <label class="control-label"></label>
                             <div class="controls">
-                                <asp:Button ID="bt_academyAdd" class="btn btn-primary span5"  runat="server" 
+                                <asp:Button ID="bt_academyAdd" class="btn btn-primary span6"  runat="server" 
                                     Text="保存" onclick="bt_academyAdd_Click"/>
-                                <input id="returnBackBtn" class="btn btn-success span5" onclick="javascript:window.location.href='AcademyList.aspx'" type="button" value="返回" "/>                           
+                                <input id="returnBackBtn" class="btn btn-success span6" onclick="javascript:window.location.href='AcademyList.aspx'" type="button" value="返回" "/>                           
                             </div>
                         </div>
 					</div>

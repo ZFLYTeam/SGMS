@@ -53,9 +53,15 @@ namespace SGMSystem
             }
             else if (e.CommandName == "delete")
             {
-                Response.Write("<script>confirm('你确认要删除吗？');</script>");
-                t_majorTableAdapte.DeleteMajor(id);
-                Response.Redirect("majorList.aspx");
+                try
+                {
+                    t_majorTableAdapte.DeleteMajor(id);
+                    Response.Redirect("majorList.aspx");
+                }
+                catch
+                {
+                    Response.Write("<script>confirm('该专业里有班级信息，无法删除');</script>");
+                }
             }
         }
     }

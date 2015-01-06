@@ -35,7 +35,7 @@
                 </td>
                 <td>                
                  <div class="controls input-append date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <asp:TextBox ID="txtBirth" size="16" ReadOnly runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtBirth" size="16" runat="server"></asp:TextBox>
 					<span class="add-on"><i class="icon-th"></i></span>
                 </div>
                 </td>

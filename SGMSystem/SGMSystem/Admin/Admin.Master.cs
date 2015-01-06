@@ -17,17 +17,16 @@ namespace SGMSystem.manager
         AdminModel admin = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-           /*设置登录验证
-            * if (Session["admin"] != null)
+           //设置登录验证
+            if (Session["admin"] != null)
             {
                 admin = (AdminModel)Session["admin"];
                 lblUser.Text = admin.userName;
             }
             else
             {
-                Response.Redirect("adminLogin.aspx");
+                Response.Redirect("../index.aspx");
             }
-            */
             string date = DateTime.Now.ToString("yyyy年MM月dd日");
             string weekday = DateTime.Now.ToString("dddd");
             string time = DateTime.Now.ToString("hh:mm:ss");

@@ -26,7 +26,7 @@ namespace SGMSystem
                     DataTable dt = t_majorTA.GetMajorById(id);
                     txtMajorNum.Text = dt.Rows[0]["MajorNum"].ToString();
                     txtMajorName.Text = dt.Rows[0]["MajorName"].ToString();
-                    txtAcademyId.Text = dt.Rows[0]["AcademyId"].ToString();
+                    ddlAcademyName.SelectedValue = dt.Rows[0]["AcademyId"].ToString();
                 }
             }
         }
@@ -37,13 +37,11 @@ namespace SGMSystem
             if (Context.Request["id"] != null)
             {
                 DataTable dt = t_majorTA.GetMajorById(id);
-                t_majorTA.UpdateMajor(Convert.ToInt32(txtMajorNum.Text), txtMajorName.Text, Convert.ToInt32(txtAcademyId.Text), id);
-                Response.Redirect("majorList.aspx");
+                t_majorTA.UpdateMajor(Convert.ToInt32(txtMajorNum.Text), txtMajorName.Text, Convert.ToInt32(ddlAcademyName.SelectedValue), id);
             }
             else
             {
-                t_majorTA.InsertMajor(Convert.ToInt32(txtMajorNum.Text), txtMajorName.Text, Convert.ToInt32(txtAcademyId.Text));
-                Response.Redirect("majorList.aspx");
+                t_majorTA.InsertMajor(Convert.ToInt32(txtMajorNum.Text), txtMajorName.Text, Convert.ToInt32(ddlAcademyName.SelectedValue));
             }
         }
     }
