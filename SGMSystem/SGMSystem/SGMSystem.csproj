@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DeployIisAppPath>Default Web Site/SGMSystem</DeployIisAppPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -60,6 +61,7 @@
     <Content Include="Admin\classList.aspx" />
     <Content Include="Admin\classSave.aspx" />
     <Content Include="Admin\CourseDetails.aspx" />
+    <Content Include="Admin\CourseList.aspx" />
     <Content Include="Admin\CourseSave.aspx" />
     <Content Include="Admin\Defualt.aspx" />
     <Content Include="Admin\ScList.aspx" />
@@ -67,6 +69,8 @@
     <Content Include="Admin\studentDetails.aspx" />
     <Content Include="Admin\StudentList.aspx" />
     <Content Include="Admin\studentSave.aspx" />
+    <Content Include="Admin\systemController.aspx" />
+    <Content Include="Admin\teacherDetails.aspx" />
     <Content Include="Admin\termList.aspx" />
     <Content Include="Admin\termSave.aspx" />
     <Content Include="editor\asp.net\demo.aspx" />
@@ -329,6 +333,7 @@
     <Content Include="editor\themes\qq\qq.css" />
     <Content Include="editor\themes\simple\simple.css" />
     <Content Include="Images\favicon.png" />
+    <Content Include="Images\headImages\favicon.png" />
     <Content Include="index.aspx" />
     <Content Include="libs\bootstrap-select\css\bootstrap-select.css" />
     <Content Include="libs\bootstrap-select\css\bootstrap-select.min.css" />
@@ -364,6 +369,33 @@
     <Content Include="libs\bootstrap-select\js\i18n\defaults-zh_CN.min.js" />
     <Content Include="libs\bootstrap-select\js\i18n\defaults-zh_TW.js" />
     <Content Include="libs\bootstrap-select\js\i18n\defaults-zh_TW.min.js" />
+    <Content Include="libs\bootstrap-switch-master\dist\css\bootstrap2\bootstrap-switch.css" />
+    <Content Include="libs\bootstrap-switch-master\dist\css\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="libs\bootstrap-switch-master\dist\css\bootstrap3\bootstrap-switch.css" />
+    <Content Include="libs\bootstrap-switch-master\dist\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="libs\bootstrap-switch-master\dist\js\bootstrap-switch.js" />
+    <Content Include="libs\bootstrap-switch-master\dist\js\bootstrap-switch.min.js" />
+    <Content Include="libs\bootstrap-switch-master\docs\css\bootstrap.min.css" />
+    <Content Include="libs\bootstrap-switch-master\docs\css\highlight.css" />
+    <Content Include="libs\bootstrap-switch-master\docs\css\main.css" />
+    <Content Include="libs\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="libs\bootstrap-switch-master\docs\js\bootstrap.min.js" />
+    <Content Include="libs\bootstrap-switch-master\docs\js\highlight.js" />
+    <Content Include="libs\bootstrap-switch-master\docs\js\jquery.min.js" />
+    <Content Include="libs\bootstrap-switch-master\docs\js\main.js" />
+    <Content Include="libs\bootstrap-switch-master\documentation-2.html" />
+    <Content Include="libs\bootstrap-switch-master\events-3.html" />
+    <Content Include="libs\bootstrap-switch-master\events.html" />
+    <Content Include="libs\bootstrap-switch-master\examples.html" />
+    <Content Include="libs\bootstrap-switch-master\gulpfile.js" />
+    <Content Include="libs\bootstrap-switch-master\index.html" />
+    <Content Include="libs\bootstrap-switch-master\main.html" />
+    <Content Include="libs\bootstrap-switch-master\methods-3.html" />
+    <Content Include="libs\bootstrap-switch-master\methods.html" />
+    <Content Include="libs\bootstrap-switch-master\options-3.html" />
+    <Content Include="libs\bootstrap-switch-master\options.html" />
+    <Content Include="libs\bootstrap-switch-master\test\bootstrap-switch.js" />
+    <Content Include="libs\bootstrap-switch-master\test\bootstrap-switch.tests.js" />
     <Content Include="libs\bootstrap\css\bootstrap.css" />
     <Content Include="libs\bootstrap\css\bootstrap.min.css" />
     <Content Include="libs\bootstrap\img\glyphicons-halflings-white.png" />
@@ -435,18 +467,25 @@
     <Content Include="Admin\NewsSave.aspx" />
     <Content Include="Admin\majorList.aspx" />
     <Content Include="Admin\majorSave.aspx" />
+    <Content Include="Admin\CourseManageList.aspx" />
+    <Content Include="Admin\CourseManageSave.aspx" />
     <Content Include="Student\Defualt.aspx" />
     <Content Include="Admin\teacherList.aspx" />
     <Content Include="Admin\teacherSave.aspx" />
+    <Content Include="Student\historySc.aspx" />
+    <Content Include="Student\NewsDetails.aspx" />
     <Content Include="Student\StuCourseChoose.aspx" />
     <Content Include="Student\StuCourseResult.aspx" />
     <Content Include="Student\StudentDetails.aspx" />
     <Content Include="Student\StudentUpdate.aspx" />
+    <Content Include="systemClosed.aspx" />
     <Content Include="Teacher\Defualt.aspx" />
+    <Content Include="Teacher\NewsDetails.aspx" />
     <Content Include="Teacher\StudentGradeManage.aspx" />
     <Content Include="Teacher\StudentGradeUpdate.aspx" />
     <Content Include="Teacher\TeachCourseChoose.aspx" />
     <Content Include="Teacher\TeachCourseResult.aspx" />
+    <Content Include="Teacher\teacherDetails.aspx" />
     <Content Include="Teacher\TeachUpdate.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -493,6 +532,13 @@
     </Compile>
     <Compile Include="Admin\CourseDetails.aspx.designer.cs">
       <DependentUpon>CourseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CourseList.aspx.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CourseList.aspx.designer.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\CourseSave.aspx.cs">
       <DependentUpon>CourseSave.aspx</DependentUpon>
@@ -546,6 +592,20 @@
     <Content Include="App_Code\DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Content>
+    <Compile Include="Admin\systemController.aspx.cs">
+      <DependentUpon>systemController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\systemController.aspx.designer.cs">
+      <DependentUpon>systemController.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\teacherDetails.aspx.cs">
+      <DependentUpon>teacherDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\teacherDetails.aspx.designer.cs">
+      <DependentUpon>teacherDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\termList.aspx.cs">
       <DependentUpon>termList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -621,12 +681,40 @@
     <Compile Include="App_Code\util\StringUtil.cs" />
     <Compile Include="App_Code\model\Student.cs" />
     <Compile Include="App_Code\model\Teacher.cs" />
+    <Compile Include="Admin\CourseManageList.aspx.cs">
+      <DependentUpon>CourseManageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CourseManageList.aspx.designer.cs">
+      <DependentUpon>CourseManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CourseManageSave.aspx.cs">
+      <DependentUpon>CourseManageSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CourseManageSave.aspx.designer.cs">
+      <DependentUpon>CourseManageSave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student\Defualt.aspx.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Student\Defualt.aspx.designer.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\historySc.aspx.cs">
+      <DependentUpon>historySc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\historySc.aspx.designer.cs">
+      <DependentUpon>historySc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student\Stu.Master.cs">
       <DependentUpon>Stu.Master</DependentUpon>
@@ -677,12 +765,26 @@
     <Compile Include="Student\StudentUpdate.aspx.designer.cs">
       <DependentUpon>StudentUpdate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="systemClosed.aspx.cs">
+      <DependentUpon>systemClosed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemClosed.aspx.designer.cs">
+      <DependentUpon>systemClosed.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\Defualt.aspx.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Teacher\Defualt.aspx.designer.cs">
       <DependentUpon>Defualt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher\StudentGradeManage.aspx.cs">
       <DependentUpon>StudentGradeManage.aspx</DependentUpon>
@@ -712,6 +814,13 @@
     <Compile Include="Teacher\TeachCourseResult.aspx.designer.cs">
       <DependentUpon>TeachCourseResult.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Teacher\teacherDetails.aspx.cs">
+      <DependentUpon>teacherDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher\teacherDetails.aspx.designer.cs">
+      <DependentUpon>teacherDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Teacher\TeachUpdate.aspx.cs">
       <DependentUpon>TeachUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -728,9 +837,7 @@
     </Compile>
     <Compile Include="App_Code\util\treeViewUtil.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\headImages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App_Code\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
@@ -754,6 +861,37 @@
     <None Include="editor\php\upload_json.php" />
     <None Include="libs\bootstrap-select\css\bootstrap-select.css.map" />
     <None Include="libs\bootstrap-select\js\bootstrap-select.js.map" />
+    <None Include="libs\bootstrap-switch-master\.gitignore" />
+    <None Include="libs\bootstrap-switch-master\bower.json" />
+    <None Include="libs\bootstrap-switch-master\CNAME" />
+    <None Include="libs\bootstrap-switch-master\coffeelint.json" />
+    <None Include="libs\bootstrap-switch-master\composer.json" />
+    <None Include="libs\bootstrap-switch-master\CONTRIBUTING.md" />
+    <None Include="libs\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="libs\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="libs\bootstrap-switch-master\docs\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="libs\bootstrap-switch-master\gulpfile.coffee" />
+    <None Include="libs\bootstrap-switch-master\karma.json" />
+    <None Include="libs\bootstrap-switch-master\LICENSE" />
+    <None Include="libs\bootstrap-switch-master\package.json" />
+    <None Include="libs\bootstrap-switch-master\README.md" />
+    <None Include="libs\bootstrap-switch-master\src\coffee\bootstrap-switch.coffee" />
+    <None Include="libs\bootstrap-switch-master\src\coffee\bootstrap-switch.tests.coffee" />
+    <None Include="libs\bootstrap-switch-master\src\docs\documentation-2.jade" />
+    <None Include="libs\bootstrap-switch-master\src\docs\events.jade" />
+    <None Include="libs\bootstrap-switch-master\src\docs\examples.jade" />
+    <None Include="libs\bootstrap-switch-master\src\docs\index.jade" />
+    <None Include="libs\bootstrap-switch-master\src\docs\main.jade" />
+    <None Include="libs\bootstrap-switch-master\src\docs\methods.jade" />
+    <None Include="libs\bootstrap-switch-master\src\docs\options.jade" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap2\bootstrap-switch.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap2\build.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap2\mixins.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap2\variables.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap3\bootstrap-switch.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap3\build.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap3\mixins.less" />
+    <None Include="libs\bootstrap-switch-master\src\less\bootstrap3\variables.less" />
     <None Include="libs\font-awesome\fonts\fontawesome-webfont.eot" />
     <None Include="libs\font-awesome\fonts\fontawesome-webfont.ttf" />
     <None Include="libs\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -799,8 +937,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>25576</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/SGMSystem</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

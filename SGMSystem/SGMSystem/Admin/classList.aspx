@@ -19,9 +19,6 @@
                     <table class="table table-bordered table-hover" style="table-layout: fixed;">
                         <tr>
                             <th>
-                                专业号
-                            </th>
-                            <th>
                                 班级名称
                             </th>
                              <th>
@@ -31,9 +28,6 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>
-                    <td>
-                        <%#Eval("majorId")%>
-                    </td>
                     <td>
                         <%#Eval("className")%>
                     </td>

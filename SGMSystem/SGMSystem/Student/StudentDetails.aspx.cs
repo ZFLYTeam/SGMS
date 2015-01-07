@@ -39,7 +39,7 @@ namespace SGMSystem
             lblNation.Text = dt.Rows[0]["nation"].ToString();
             lblPolitical.Text = dt.Rows[0]["political"].ToString();
             lblIdNum.Text = dt.Rows[0]["idNum"].ToString();
-            headImage.ImageUrl = "../Images/headImages" + student.headImage;
+            headImage.ImageUrl = "../Images/headImages/" + student.headImage;
             lblAcademy.Text = dt.Rows[0]["academyName"].ToString();
             lblMajor.Text = dt.Rows[0]["majorName"].ToString();
             lblClass.Text = dt.Rows[0]["className"].ToString();

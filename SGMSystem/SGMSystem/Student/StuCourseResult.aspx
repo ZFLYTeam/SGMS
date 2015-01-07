@@ -11,9 +11,6 @@
                 <div class="data_content">
                     <table class="table table-bordered table-hover" style="table-layout: fixed;">
                         <tr>
-                          <th>
-                                专业名
-                            </th>
                             <th>
                                 课程名
                             </th>
@@ -26,19 +23,13 @@
                               <th>
                                 学期名
                             </th>
-                               <th>
-                                学院名
-                            </th>
                             <th >
-                                选择
+                                操作
                             </th>
                         </tr>
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>
-                    <td>
-                        <%#Eval("majorName")%>
-                    </td>
                     <td>
                         <%#Eval("courseName")%>
                     </td>
@@ -51,11 +42,8 @@
                     <td>
                         <%#Eval("termName")%>
                     </td>
-                      <td>
-                        <%#Eval("academyName")%>
-                    </td>
                     <td>
-                    <asp:Button ID="btnStudentCourseResultDelete" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("courseName")%>' CommandName="delete" runat="server" Text="退课" />
+                    <asp:Button ID="btnStudentCourseResultDelete" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>' CommandName="delete" runat="server" Text="退课" />
                  </td>
                 </tr>
             </ItemTemplate> 

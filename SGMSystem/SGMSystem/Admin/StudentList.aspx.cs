@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using SGMSystem.App_Code.DataSetTableAdapters;
 using System.Data;
 using SGMSystem.App_Code;
+using System.Web.Security;
 
 
 namespace SGMSystem
@@ -52,6 +53,12 @@ namespace SGMSystem
                 DataTable DT = view_studentTA.GetData();
                 listStudent.DataSource = DT;
                 listStudent.DataBind();
+            }
+            else if (e.CommandName == "reset")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+                t_studentTableAdapter t_s = new t_studentTableAdapter();
+                t_s.UpdateStudentPwd(FormsAuthentication.HashPasswordForStoringInConfigFile("123456", "MD5"), id);
             }
         }
         protected void btnStudentAdd_Click(object sender, EventArgs e)

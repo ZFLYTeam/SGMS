@@ -18,16 +18,16 @@
                             <th>
                                 教师姓名
                             </th>
-                            <th>
+                            <th style="width:15%">
                                 性别
                             </th>
                             <th>
                                 出生日期
-                            </th>
+                            </th style="width:15%">
                             <th >
                                 职称
                             </th>
-                            <th>
+                            <th  style="width:30%">
                                 操作
                             </th>
                         </tr>
@@ -51,7 +51,9 @@
                     </td>
                     <td>
                         <asp:Button ID="btnTeacherDelete" class="btn btn-mini  btn-danger" CommandArgument='<%#Eval("id")%>' CommandName="delete" runat="server" Text="删除" />
-                        <asp:Button ID="btnTeacherModify" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>' CommandName="modify" runat="server" Text="修改" />                      
+                        <asp:Button ID="btnTeacherModify" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>' CommandName="modify" runat="server" Text="修改" /> 
+                        <asp:Button ID="btnTeacherDetails" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>' CommandName="details" runat="server" Text="详情" />    
+                        <asp:Button ID="btnResetPsw" class="btn btn-mini  btn-danger" CommandArgument='<%#Eval("id")%>' CommandName="reset" runat="server" Text="重置密码" />                  
                     </td>
                 </tr>
             </ItemTemplate> 

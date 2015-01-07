@@ -41,13 +41,9 @@
                             <div class="nav-collapse collapse navbar-responsive-collapse">
                                <ul class="nav">
                                     <li><a href="Defualt.aspx">主页</a></li>
-                                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">栏目一<strong
-                                        class="caret"></strong></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">一</a> </li>
-                                            <li><a href="#">二</a> </li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="TeachcourseChoose.aspx">选课</a></li>
+                                    <li><a href="TeachcourseResult.aspx">选课结果</a></li>
+                                     <li><a href="StudentGradeManage.aspx">评分管理</a></li>
                                 </ul>
                                 <ul class="nav pull-right">
                                     <li><a class="fa fa-user">
@@ -56,7 +52,8 @@
                                     <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#">系统管理<strong
                                         class="caret"></strong></a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">修改密码</a></li>
+                                        <li><a href="teacherDetails.aspx">个人信息</a></li>
+                                            <li><a href="TeachUpdate.aspx">修改密码</a></li>
                                             <li class="divider"></li>
                                             <li><a href="#alertExit" data-toggle="modal">退出系统</a></li>
                                         </ul>
@@ -134,7 +131,7 @@
             $('.selectpicker').selectpicker();
         });
         function logOut() {
-            window.location.href = "Defualt.aspx";
+            window.location.href = "../index.aspx";
         }
     </script>
     <asp:ContentPlaceHolder ID="footer" runat="server"> </asp:ContentPlaceHolder>

@@ -13,7 +13,6 @@
             OnClick="btnStudentAdd_Click" />
     </div>
    <div style="padding-top: 25px">
-
 <asp:Repeater ID="listStudent" runat="server" OnItemCommand="listStudent_ItemCommand">
             <HeaderTemplate>
                 <div class="data_content">
@@ -27,9 +26,6 @@
                             </th>
                             <th width="7%">
                                 性别
-                            </th>
-                            <th width="10%">
-                                出生日期
                             </th>
                             <th width=10%">
                                 民族
@@ -51,9 +47,6 @@
                         <%#Eval("sex")%>
                     </td>
                     <td>
-                        <%#Eval("birth")%>
-                    </td>
-                    <td>
                         <%#Eval("nation")%>
                     </td>
                     <td>
@@ -63,6 +56,8 @@
                             CommandName="modify" runat="server" Text="修改" />
                         <asp:Button ID="btnStudentDetails" class="btn btn-mini  btn-info" CommandArgument='<%#Eval("id")%>'
                             CommandName="details" runat="server" Text="学生详情" />
+                        <asp:Button ID="btnResetPsw" class="btn btn-mini  btn-danger" CommandArgument='<%#Eval("id")%>'
+                            CommandName="reset" runat="server" Text="重置密码" />
                     </td>
                 </tr>
             </ItemTemplate>

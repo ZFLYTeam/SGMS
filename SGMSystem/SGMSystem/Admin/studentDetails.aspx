@@ -10,77 +10,77 @@
 <div class="span10">
 <div>
         <table align="center">
-            <tr>
-                <td width="10%" align="right">
-                    姓名：
-                </td>
-                <td width="30%">
-                    <asp:TextBox ID="txt_name" required runat="server"></asp:TextBox>
-                </td>
-                 <td width="10%" align="right">
-                    学号：
-                </td>
-               <td width="10%" align="right">
-                    <asp:TextBox ID="txt_sno" required runat="server"></asp:TextBox>
-                </td>
-                <td width="10%" align="right">
+        <tr>
+               <td stlye="width:120px" align="right">
                     照片：
                 </td>
+                <td stlye="width:120px">
+                     <asp:Image ID="imgheadImage" class="img-polaroid"  runat="server" />
+                </td>
                 <td>
-                    <asp:TextBox ID="txt_headImage" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                </td>
+        </tr>
+            <tr>
+                <td align="right">
+                    姓名：
+                </td>
+                <td>
+                  <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+                </td>
+                 <td align="right">
+                    学号：
+                </td>
+               <td align="left">
+                   <asp:Label ID="lblSno" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
-            
             <tr>
-                <td width="10%" align="right">
+                <td align="right">
                     性别：
                 </td>
                 <td>
-                    <asp:TextBox ID="txt_sex" runat="server"></asp:TextBox>
+                    <asp:Label ID="lblSex" runat="server" Text=""></asp:Label>
                 </td>
-                 <td width="20%" align="right">
+                 <td align="right">
                     出生日期：
                 </td>
                 <td>
-                    <asp:TextBox ID="txt_birth" runat="server"></asp:TextBox>
+                  <asp:Label ID="lblBirth" runat="server" Text=""></asp:Label>
                 </td>
-                 <td align="right">
+           </tr>        
+            <tr>
+             <td align="right">
                     班级：
                 </td>
                 <td>
-                    <asp:TextBox ID="txt_class" runat="server"></asp:TextBox>
+                    <asp:Label ID="lblClass" runat="server" Text=""></asp:Label>
                 </td>
-            </tr>
-
-            <tr>
+       
                 <td align="right">
                     民族：
                 </td>
                 <td>
-                <asp:TextBox ID="txt_nation" runat="server"></asp:TextBox>
-                </td>
-
-                  <td width="20%" align="right">
+               <asp:Label ID="lblNation" runat="server" Text=""></asp:Label>
+                </td> 
+                    
+            </tr>
+            <tr>
+              <td align="right">
                     政治面貌：
                 </td>
                 <td>
-                <asp:TextBox ID="txt_political" runat="server"></asp:TextBox>
+                 <asp:Label ID="lblPolitical" runat="server" Text=""></asp:Label>
                 </td>
 
-                  
-               
-            </tr>
-            <tr>
-                 <td width="20%" align="right">
+                 <td align="right">
                     身份证号码：
                 </td>
                 <td>
-                <asp:TextBox ID="txt_idNum" runat="server"></asp:TextBox>
+              <asp:Label ID="lblNum" runat="server" Text=""></asp:Label>
                 </td>
-             
             </tr>
-
-           
         </table>
     </div>
     </div>

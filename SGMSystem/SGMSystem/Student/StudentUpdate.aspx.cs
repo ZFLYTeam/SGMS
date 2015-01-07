@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using SGMSystem.App_Code.DataSetTableAdapters;
 using SGMSystem.App_Code;
+using System.Web.Security;
 
 namespace SGMSystem
 {
@@ -38,8 +39,7 @@ namespace SGMSystem
         {
             student = (StudentModel)Session["student"];
             DataTable dt = t_stuTA.GetStudentById(student.id);
-          
-            if (txtOldPwd.Text != dt.Rows[0]["password"].ToString())
+            if (FormsAuthentication.HashPasswordForStoringInConfigFile(txtOldPwd.Text, "MD5") != dt.Rows[0]["password"].ToString())
             {
                 lblPrompt.Text = "原密码错误！(┬＿┬)";
             }
@@ -53,8 +53,7 @@ namespace SGMSystem
             }
             else
             {
-               t_stuTA.UpdateStudentPwd(txtNewPwd.Text,student.id);
-               
+                t_stuTA.UpdateStudentPwd(FormsAuthentication.HashPasswordForStoringInConfigFile(txtNewPwd.Text, "MD5"), student.id);
             }
         }
     }

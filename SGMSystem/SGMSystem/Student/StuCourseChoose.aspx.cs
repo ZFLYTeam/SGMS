@@ -14,6 +14,15 @@ namespace SGMSystem.Student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            StudentModel s = null;
+            if (Session["student"] != null)
+            {
+                s = (StudentModel)Session["student"];
+            }
+            else
+            {
+                Response.Redirect("../index.aspx");
+            }
             view_techCourseTableAdapter view_techCourseTA = new view_techCourseTableAdapter();
             view_studentTableAdapter view_studentTa = new view_studentTableAdapter();
             StudentModel student = (StudentModel)Session["student"];

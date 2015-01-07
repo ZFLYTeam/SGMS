@@ -53,17 +53,10 @@
                     图像：
                 </td>
                 <td>
+                <asp:FileUpload ID="fldCover" runat="server" />
                     <asp:TextBox ID="txtHeahImage" runat="server"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td align="right">
-                    密码：
-                </td>
-                <td>
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-                </td>
-             </tr>
             <tr>
                 <td align="right">
                 </td>

@@ -13,8 +13,16 @@ namespace SGMSystem.Student
     public partial class StuCourseResult1 : System.Web.UI.Page
     {
        protected void Page_Load(object sender, EventArgs e)
-
         {
+            StudentModel s = null;
+            if (Session["student"] != null)
+            {
+                s = (StudentModel)Session["student"];
+            }
+            else
+            {
+                Response.Redirect("../index.aspx");
+            }
             view_SCTableAdapter view_SC = new view_SCTableAdapter();
             view_studentTableAdapter view_studentTa = new view_studentTableAdapter();
             StudentModel student = (StudentModel)Session["student"];
@@ -33,14 +41,15 @@ namespace SGMSystem.Student
             {
                 t_scTableAdapter t_scTA = new t_scTableAdapter();
                 DataTable dt = t_scTA.GetData();
+                int id=Convert.ToInt32(e.CommandArgument);
+                t_scTA.DeleteSc(id);
                 string courseName = (e.CommandArgument).ToString();
-                //t_scTA.DeleteSc(courseName);
                 Response.Redirect("StuCourseResult.aspx");
             }
         }
         protected void btnStudentCourseChooseReturn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("StudentCourseChoose.aspx");
+            Response.Redirect("StuCourseChoose.aspx");
         }
     }
 }

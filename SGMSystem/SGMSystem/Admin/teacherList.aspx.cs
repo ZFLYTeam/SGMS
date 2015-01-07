@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SGMSystem.App_Code.DataSetTableAdapters;
 using System.Data;
+using System.Web.Security;
 
 namespace SGMSystem
 {
@@ -40,6 +41,16 @@ namespace SGMSystem
                 Response.Write("<script>confirm('你确认要删除吗？');</script>");
                 t_teacherTableAdapte.DeleteTeacher(id);
                 Response.Redirect("teacherList.aspx");
+            }
+            else if (e.CommandName == "details")
+            {
+                Response.Redirect("teacherDetails.aspx?id=" + id);
+            }
+            else if (e.CommandName == "reset")
+            {
+                int tid = Convert.ToInt32(e.CommandArgument);
+                t_studentTableAdapter t_s = new t_studentTableAdapter();
+                t_s.UpdateStudentPwd(FormsAuthentication.HashPasswordForStoringInConfigFile("123456", "MD5"), tid);
             }
         }
     }

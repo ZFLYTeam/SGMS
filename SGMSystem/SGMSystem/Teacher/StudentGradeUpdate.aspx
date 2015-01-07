@@ -13,8 +13,8 @@
 			<div class="row-fluid">
 				<div class="span6">
 					<div class="form-horizontal">
-                       <span class="stuId">学生学号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblStuId" runat="server"></asp:Label><br /></span><br/><br />
-		                <span class="cmId">课编程号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblCmId" runat="server"></asp:Label><br /></span><br/>
+                       <span>学生：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblStuId" runat="server"></asp:Label><br /></span><br/>
+		                <span>课程：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblCmId" runat="server"></asp:Label><br /></span><br/>
         <table align="left">
              <tr>
                 <td align="left">                              
@@ -33,18 +33,21 @@
                 </td>
              </tr>            
             <tr>
-                <td align="right">
-                </td>
+            <td></td>
                 <td>
-                    <asp:Button ID="btnScSave" class="btn btn-success" style="width: 66%" 
-                        runat="server" Text="确定" onclick="btnScUpdate_Click" />
+                <br />
+                    <asp:Button ID="btnScSave" class="btn btn-success" style="width: 49%" 
+                        runat="server" Text="保存" onclick="btnScUpdate_Click" />
+                        <asp:Button ID="btnSubmit" class="btn btn-success" style="width: 49%" runat="server" Text="提交" onclick="btnSubmit_Click" />
                 </td>
             </tr>
             <tr>
                 <td align="right">
                 </td>
                 <td>
-                     <input id="btnReturn" class="btn btn-success" style="width: 66%"  onclick="javascript:window.location.href='StudentGradeManage.aspx'" type="button" value="返回" />  
+                <br/>
+                    <asp:Button ID="return" class="btn btn-primary" Width="100%" runat="server" 
+                        Text="返回" onclick="return_Click" />
                 </td>
             </tr>
         </table>

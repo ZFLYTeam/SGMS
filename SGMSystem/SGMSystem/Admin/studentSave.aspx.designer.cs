@@ -40,6 +40,15 @@ namespace SGMSystem {
         protected global::System.Web.UI.WebControls.TextBox txt_sno;
         
         /// <summary>
+        /// fldCover 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fldCover;
+        
+        /// <summary>
         /// txt_headImage 控件。
         /// </summary>
         /// <remarks>
@@ -110,15 +119,6 @@ namespace SGMSystem {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_idNum;
-        
-        /// <summary>
-        /// txt_password 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_password;
         
         /// <summary>
         /// bt_studentSave 控件。

@@ -12,9 +12,6 @@
                 <div class="data_content">
                     <table class="table table-bordered table-hover" style="table-layout: fixed;">
                         <tr>
-                          <th>
-                                专业名
-                            </th>
                             <th>
                                 课程名
                             </th>
@@ -27,9 +24,6 @@
                               <th>
                                 学期名
                             </th>
-                               <th>
-                                学院名
-                            </th>
                             <th >
                                 选择
                             </th>
@@ -37,9 +31,6 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>
-                    <td>
-                        <%#Eval("majorName")%>
-                    </td>
                     <td>
                         <%#Eval("courseName")%>
                     </td>
@@ -51,9 +42,6 @@
                     </td>
                     <td>
                         <%#Eval("termName")%>
-                    </td>
-                      <td>
-                        <%#Eval("academyName")%>
                     </td>
                     <td>
                     <asp:CheckBox ID="CheckBoxTeachCourseManage" runat="server" value='<%#Eval("id") %>'/>

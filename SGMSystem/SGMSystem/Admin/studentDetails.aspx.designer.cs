@@ -22,84 +22,84 @@ namespace SGMSystem {
         protected global::System.Web.UI.WebControls.TreeView menuTree;
         
         /// <summary>
-        /// txt_name 控件。
+        /// imgheadImage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_name;
+        protected global::System.Web.UI.WebControls.Image imgheadImage;
         
         /// <summary>
-        /// txt_sno 控件。
+        /// lblName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sno;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// txt_headImage 控件。
+        /// lblSno 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_headImage;
+        protected global::System.Web.UI.WebControls.Label lblSno;
         
         /// <summary>
-        /// txt_sex 控件。
+        /// lblSex 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sex;
+        protected global::System.Web.UI.WebControls.Label lblSex;
         
         /// <summary>
-        /// txt_birth 控件。
+        /// lblBirth 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_birth;
+        protected global::System.Web.UI.WebControls.Label lblBirth;
         
         /// <summary>
-        /// txt_class 控件。
+        /// lblClass 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_class;
+        protected global::System.Web.UI.WebControls.Label lblClass;
         
         /// <summary>
-        /// txt_nation 控件。
+        /// lblNation 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_nation;
+        protected global::System.Web.UI.WebControls.Label lblNation;
         
         /// <summary>
-        /// txt_political 控件。
+        /// lblPolitical 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_political;
+        protected global::System.Web.UI.WebControls.Label lblPolitical;
         
         /// <summary>
-        /// txt_idNum 控件。
+        /// lblNum 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_idNum;
+        protected global::System.Web.UI.WebControls.Label lblNum;
     }
 }

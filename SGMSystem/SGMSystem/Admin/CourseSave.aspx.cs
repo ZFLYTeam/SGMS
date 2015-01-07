@@ -33,7 +33,7 @@ namespace SGMSystem
             if (Context.Request["id"] != null)
             {
                 int id = Convert.ToInt32(Context.Request["id"]);
-                t_courseTA.UpdateCourse(Convert.ToInt32(ddlAcademyName.SelectedValue), Convert.ToInt32(txtCourseyName.Text), ddlProperty.SelectedItem.Text, id);
+                t_courseTA.UpdateCourse(Convert.ToInt32(ddlAcademyName.SelectedValue),txtCourseyName.Text, ddlProperty.SelectedItem.Text, id);
                 Response.Redirect("CourseList.aspx");
             }
             else

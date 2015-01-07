@@ -20,31 +20,29 @@ namespace SGMSystem
                 t.getTreeView(menuTree);
                 if (Context.Request["id"] == null)
                 {
-                    txt_name.Text = "";
-                    txt_sno.Text = "";
-                    txt_headImage.Text = "";
-                    txt_sex.Text = "";
-                    txt_birth.Text = "";
-                    txt_class.Text = "";
-                    txt_nation.Text = "";
-                    txt_political.Text = "";
-                    txt_idNum.Text = "";
-                  
+                    lblName.Text = "";
+                    lblSno.Text = "";
+                    lblSex.Text = "";
+                    lblBirth.Text = "";
+                    lblClass.Text = "";
+                    lblNation.Text = "";
+                    lblPolitical.Text = "";
+                    lblNum.Text = "";
                 }
                 else
                 {
                     view_studentTableAdapter view_studentTA = new view_studentTableAdapter();
                     int id = Convert.ToInt32(Context.Request["id"]);
-                    DataTable dt = view_studentTA.GetData();
-                    txt_name.Text = dt.Rows[0]["name"].ToString();
-                    txt_sno.Text = dt.Rows[0]["sno"].ToString();
-                    txt_headImage.Text = dt.Rows[0]["headImage"].ToString();
-                    txt_sex.Text = dt.Rows[0]["sex"].ToString();
-                    txt_birth.Text = dt.Rows[0]["birth"].ToString();
-                    txt_class.Text = dt.Rows[0]["className"].ToString();
-                    txt_nation.Text = dt.Rows[0]["nation"].ToString();
-                    txt_political.Text = dt.Rows[0]["political"].ToString();
-                    txt_idNum.Text = dt.Rows[0]["idNum"].ToString();
+                    DataTable dt = view_studentTA.GetDataById(id);
+                    lblName.Text = dt.Rows[0]["name"].ToString();
+                    lblSno.Text = dt.Rows[0]["sno"].ToString();
+                    imgheadImage.ImageUrl = "../Images/headImages/" + dt.Rows[0]["headImage"].ToString();
+                    lblSex.Text = dt.Rows[0]["sex"].ToString();
+                    lblBirth.Text = dt.Rows[0]["birth"].ToString();
+                    lblClass.Text = dt.Rows[0]["className"].ToString();
+                    lblNation.Text = dt.Rows[0]["nation"].ToString();
+                    lblPolitical.Text = dt.Rows[0]["political"].ToString();
+                    lblNum.Text = dt.Rows[0]["idNum"].ToString();
                  
                 }
             }

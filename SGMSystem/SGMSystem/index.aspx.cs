@@ -12,6 +12,7 @@ namespace SGMSystem
 {
     public partial class index : System.Web.UI.Page
     {
+        t_optionTableAdapter t_opTa = new t_optionTableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
             ///如果管理员在session中则删除
@@ -22,8 +23,10 @@ namespace SGMSystem
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            String 啊 = txtValidateCode.Text;
-            String code = txtCode.Text;
+            DataTable dt1 = t_opTa.GetData();
+            int stuSys = (int)dt1.Rows[0]["isStuSysOn"];
+            int teacherSys = (int)dt1.Rows[0]["isTeachSystemOn"];
+
             if (txtValidateCode.Text == txtCode.Text)
             {
                 DataTable dt;
@@ -47,8 +50,12 @@ namespace SGMSystem
                 }
                 else if (ddlStatus.SelectedItem.Text == "学生")
                 {
+                    if (stuSys == 0)
+                    {
+                        Response.Redirect("systemClosed.aspx");
+                    }
                     t_studentTableAdapter t_stuTa = new t_studentTableAdapter();
-                    dt = t_stuTa.GetStudentByLogin(txtUserName.Text, txtPassword.Text);
+                    dt = t_stuTa.GetStudentByLogin(txtUserName.Text, FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "MD5"));
                     if (dt.Rows.Count == 1)
                     {
                         ///把返回的属性赋值给student
@@ -71,10 +78,14 @@ namespace SGMSystem
                 }
                 else if (ddlStatus.SelectedItem.Text == "教师")
                 {
+                    if (teacherSys == 0)
+                    {
+                        Response.Redirect("systemClosed.aspx");
+                    }
                     try
                     {
                                             t_teacherTableAdapter t_teacTa = new t_teacherTableAdapter();
-                    dt = t_teacTa.GetTeacherByLogin(Convert.ToInt32(txtUserName.Text), txtPassword.Text);
+                                            dt = t_teacTa.GetTeacherByLogin(Convert.ToInt32(txtUserName.Text), FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "MD5"));
                     if (dt.Rows.Count == 1)
                     {
                         ///把返回的属性赋值给Teacher

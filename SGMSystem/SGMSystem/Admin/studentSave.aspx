@@ -12,51 +12,53 @@
 <div>
         <table align="center">
             <tr>
-                <td width="10%" align="right">
+                <td>
                     姓名：
                 </td>
-                <td width="30%">
+                <td>
                     <asp:TextBox ID="txt_name" required runat="server"></asp:TextBox>
                 </td>
-                 <td width="10%" align="right">
+                 <td>
                     学号：
                 </td>
-               <td width="10%" align="right">
+               <td  >
                     <asp:TextBox ID="txt_sno" required runat="server"></asp:TextBox>
                 </td>
-                <td width="10%" align="right">
+            </tr>
+            <tr>
+                <td >
                     照片：
                 </td>
                 <td>
-                    <asp:TextBox ID="txt_headImage" runat="server"></asp:TextBox>
+                     <asp:FileUpload ID="fldCover" runat="server" />
+                    <asp:TextBox ID="txt_headImage" runat="server"  Visible="False"></asp:TextBox>
                 </td>
-            </tr>
-            
-            <tr>
-                <td width="10%" align="right">
+                <td >
                     性别：
                 </td>
                 <td>
                     <asp:TextBox ID="txt_sex" runat="server"></asp:TextBox>
                 </td>
-                 <td width="20%" align="right">
-                    出生日期：
+                </tr>
+                <tr>
+                 <td>
+                    出生：
                 </td>
-                <td>
+                <td >
                     <div class="controls input-append date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                     <asp:TextBox ID="txt_birth" runat="server"></asp:TextBox>
-					<span class="add-on"><i class="icon-th"></i></span>
+				    <span class="add-on"><i class="icon-th"></i></span>
                 </div>
                 </td>
-            </tr>
-            <tr>
-                <td align="right">
+                <td>
                     民族：
                 </td>
                 <td>
                 <asp:TextBox ID="txt_nation" runat="server"></asp:TextBox>
                 </td>
-                   <td align="right">
+               </tr>
+                <tr>
+                   <td>
                     班级：
                 </td>
                 <td>
@@ -67,38 +69,31 @@
                         SelectCommand="SELECT * FROM [t_class]">
                     </asp:SqlDataSource>
                 </td>
-                 <td width="20%" align="right">
+                 <td>
                     政治面貌：
                 </td>
                 <td>
                 <asp:TextBox ID="txt_political" runat="server"></asp:TextBox>
                 </td>
-            </tr>
-            <tr>
-                 <td width="20%" align="right">
+                </tr>
+                <tr>
+                 <td>
                     身份证号码：
                 </td>
                 <td>
                 <asp:TextBox ID="txt_idNum" runat="server"></asp:TextBox>
                 </td>
-                 <td align="right">
-                    密码：
-                </td>
-                <td>
-                <asp:TextBox ID="txt_password" runat="server" ClientIDMode="Inherit" TextMode="Password"></asp:TextBox>
-                </td>
             </tr>
-
            <tr>
                 <td align="right">
                 </td>
                 <td>
-                    <asp:Button ID="bt_studentSave" class="btn btn-success" style="width: 66%" runat="server" Text="确定" OnClick="bt_studentSave_Click" />
+                    <asp:Button ID="bt_studentSave" class="btn btn-success" runat="server" Width="220px" Text="确定" OnClick="bt_studentSave_Click" />
                 </td>
                 <td align="right">
                 </td>
                 <td>
-                     <input id="btnReturn" class="btn btn-success" style="width: 66%"  onclick="javascript:window.location.href='studentList.aspx'" type="button" value="返回" />  
+                     <input id="btnReturn" class="btn btn-success" style="width:220px" onclick="javascript:window.location.href='studentList.aspx'" type="button" value="返回" />  
                 </td>
             </tr>
         </table>

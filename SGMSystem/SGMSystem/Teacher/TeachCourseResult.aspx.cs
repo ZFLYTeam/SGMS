@@ -15,6 +15,15 @@ namespace SGMSystem.Teacher
         view_courseManageTableAdapter view_courseManageTableAdapte = new view_courseManageTableAdapter();
         protected void Page_Load(object sender, EventArgs e)
         {
+            TeacherModel s = null;
+            if (Session["teacher"] != null)
+            {
+                s = (TeacherModel)Session["teacher"];
+            }
+            else
+            {
+                Response.Redirect("../index.aspx");
+            }
             if (!IsPostBack)
             {
                 TeacherModel tm = (TeacherModel)Session["teacher"];

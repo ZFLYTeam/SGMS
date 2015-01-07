@@ -76,6 +76,7 @@
                                         class="caret"></strong></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="#">修改密码</a></li>
+                                            <li><a href="systemController.aspx">系统开关</a></li>
                                             <li class="divider"></li>
                                             <li><a href="#alertExit" data-toggle="modal">退出系统</a></li>
                                         </ul>
@@ -153,7 +154,7 @@
             $('.selectpicker').selectpicker();
         });
         function logOut() {
-            window.location.href = "adminLogin.aspx";
+            window.location.href = "../index.aspx";
         }
     </script>
     <asp:ContentPlaceHolder ID="footer" runat="server"> </asp:ContentPlaceHolder>

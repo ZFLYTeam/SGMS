@@ -38,7 +38,8 @@ namespace SGMSystem.Admin
             }
             else
             {
-                t_termTA.InsertTerm(txtTerm.Text);
+                t_termTA.UpdateSetNull();
+                t_termTA.InsertTerm(txtTerm.Text,"isNow");
                 Response.Redirect("termList.aspx");
             }       
         }
