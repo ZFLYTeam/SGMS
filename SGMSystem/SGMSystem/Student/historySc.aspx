@@ -23,7 +23,7 @@
     </asp:Repeater>
     <asp:SqlDataSource ID="SqlforTerm" runat="server" 
         ConnectionString="<%$ ConnectionStrings:db_SGMSConnectionString %>" 
-        SelectCommand="SELECT * FROM [t_term] where isNow != 'isNow'"></asp:SqlDataSource>
+        SelectCommand="SELECT * FROM [t_term]"></asp:SqlDataSource>
     </div>
     <div class="span1">
     </div>
